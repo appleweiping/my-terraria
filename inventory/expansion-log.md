@@ -39,3 +39,20 @@
   - `Solar_Courier.plr`
 - Each paired character was saved and read back through TEdit's player loader with 20 valid inventory items.
 - Final world SHA-256: `E375627D06E640508E32E49DCEF7D5230C6C148A5C4BF1861E296CCE14672F99`
+
+### CurseForge Popular Map Import
+
+- Added `external-sources/2026-05-15-curseforge-imports.md`.
+- Downloaded and hashed 10 high-signal CurseForge map/source candidates across adventure, all-items/storage, arena, starter, and building/showcase categories.
+- Public GitHub/LFS imports with source notices:
+  - `Terraria_saves/imported/story-of-red-cloud/the-story-of-red-cloud.wld`
+  - `Terraria_saves/imported/all-boss-battle-arenas/All Boss Battle Arenas Expert.wld`
+  - `Terraria_saves/imported/compact-all-items-hub-master/SUNV-XTRA-All-ITEMS-HUB-1.4.5-Master.wld`
+- Private-only local backups, not pushed because source pages showed All Rights Reserved:
+  - Builder's Workshop
+  - Ztorage Zystem
+  - The Shimmer Lands
+  - Khaiostomization
+  - Scopey 1.4.5 All Items
+  - Starter World 1.4.4.9 Master
+  - The Kingdom

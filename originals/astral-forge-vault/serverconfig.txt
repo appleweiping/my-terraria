@@ -1,0 +1,9 @@
+world=D:\Terraria_doc\originals\astral-forge-vault\Astral_Forge_Vault.wld
+autocreate=3
+seed=getfixedboi
+worldname=Astral Forge Vault
+difficulty=2
+maxplayers=8
+port=7781
+noupnp=1
+motd=Astral Forge Vault seed-world generation.

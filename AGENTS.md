@@ -7,7 +7,7 @@ This repository is a long-term Terraria save archive. Agents working here should
 Maintain a high-quality, source-traceable Terraria save library containing:
 
 - backed-up local saves
-- imported external worlds/characters when licensing and provenance allow
+- imported external worlds/characters, with public/private handling based on provenance and redistribution risk
 - original save projects designed to be complete, distinctive, and actually useful
 
 The user explicitly rejects toy/demo saves. Do not create placeholder work and pretend it is complete.
@@ -21,6 +21,9 @@ The user explicitly rejects toy/demo saves. Do not create placeholder work and p
   - File inventories, hashes, sorting notes, and restoration guidance.
 - `external-sources/`
   - Research notes, source candidates, provenance records, and import decisions.
+- `private-imports/` or local-only paths outside Git
+  - Use for private backup of high-quality third-party saves whose redistribution rights are unclear.
+  - Do not push private-imported third-party binaries to public GitHub unless permission/license is clear.
 - `originals/`
   - Original save concepts, world-generation configs, design specs, validation checklists, and generated seed worlds.
 
@@ -34,9 +37,10 @@ When the user asks to expand the archive by importing saves from other people:
 2. Prefer high-signal candidates.
    - Evidence of quality includes downloads, update recency, community reputation, screenshots/video, changelog quality, completeness, and clear install instructions.
    - Prefer saves that are meaningfully different from this archive: adventure maps, polished all-item/storage systems, arenas, farms, challenge worlds, class-ready characters, modded total-conversion saves, or unusually strong builds.
-3. Respect license and provenance.
-   - Do not copy third-party binary saves into this public GitHub repository unless the source license/terms clearly permit redistribution or the user has obtained permission.
-   - If a source has no license or unclear redistribution terms, record it as a candidate and provide download/install instructions rather than committing its files.
+3. Respect provenance and choose the right storage surface.
+   - If a source is high-quality, novel, and popular but has unclear redistribution terms, you may create a local/private backup for the user with full provenance and hashes.
+   - Do not push third-party binary saves with unclear redistribution rights to the public GitHub repo unless the user explicitly confirms this repository should be treated as private or permission/license is clear.
+   - If the repo is public and permission is unclear, commit source notes and install instructions, not the third-party binary files.
    - Keep a provenance note for every imported save: source URL, author, version, license/permission status, retrieval date, expected Terraria/tModLoader version, included files, and reason for inclusion.
 4. Match complete save sets.
    - Preserve associated `.wld`, `.plr`, `.map`, `.bak`, `.twld`, `.tplr`, mod lists, readmes, and install notes when they belong together.
@@ -50,10 +54,11 @@ When the user asks to expand the archive by importing saves from other people:
 When creating original saves, the bar is high:
 
 - No toy worlds, empty shells, or "proof of concept" saves presented as final.
+- Do not stop at a generated seed/base world. A generated base is only a staging point; continue toward a finished ultimate map.
 - A credible original save must have a thesis, world/character role, progression path, storage/utility plan, build plan, biome/farm/arena coverage, and acceptance tests.
 - Distinctiveness matters. Do not merely clone Builder's Workshop, a generic all-item map, or a random generated world.
-- A generated vanilla world can be committed as a seed/base world only when labeled honestly as a seed/base, not as a finished handcrafted save.
-- If a fully completed `.wld` or `.plr` cannot be generated programmatically in the current environment, create the full design dossier, configs, and next-action checklist instead of fabricating completion.
+- A generated vanilla world can be committed as a seed/base world only as an intermediate commit, not as the endpoint.
+- If a fully completed `.wld` or `.plr` cannot be generated programmatically in the current environment, still push the save as far as the tools allow and record exactly what remains. Do not use tool limits as an excuse to stop at a toy stage.
 - For a finished original save, aim for:
   - all major biomes accessible
   - clean spawn hub
@@ -72,4 +77,3 @@ When creating original saves, the bar is high:
 - Push after each coherent batch when network/auth works.
 - Do not remove existing saves unless the user explicitly approves deletion.
 - Preserve binary saves with Git LFS.
-

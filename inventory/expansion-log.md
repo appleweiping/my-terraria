@@ -20,5 +20,8 @@
 - Added `originals/astral-forge-vault/`.
 - Generated `Astral_Forge_Vault.wld` as a vanilla Terraria 1.4.x large master `getfixedboi` seed/base world using `TerrariaServer.exe`.
 - SHA-256: `304430452459C2060A601FA521705BBB5CE4112E46A6B8CBB0047C4D5BB1370B`
-- Status: generated base world, not finished handcrafted release.
+- Ran a TEdit-library builder pass that modifies the actual `.wld`.
+- Upgraded world SHA-256: `41297118448C50E43DD640A98E989A8D4290010B8614D9EA710D2639130CA544`
+- Status: programmatically upgraded ultimate-map v0.1, not final handcrafted release.
+- Added aerial command hub, vault library, class sanctums, universal arena, farm matrix, transit spine, and named chest caches.
 - Completion standard lives in `originals/astral-forge-vault/acceptance-checklist.md`.

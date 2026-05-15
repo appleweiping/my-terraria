@@ -25,3 +25,17 @@
 - Status: programmatically upgraded ultimate-map v0.1, not final handcrafted release.
 - Added aerial command hub, vault library, class sanctums, universal arena, farm matrix, transit spine, and named chest caches.
 - Completion standard lives in `originals/astral-forge-vault/acceptance-checklist.md`.
+
+### Astral Forge Vault v1.0 Completion Pass
+
+- Rebuilt the actual `.wld` with valid chest/sign tile entities.
+- Final saved world read-back check: title `Astral Forge Vault - Ultimate Archive`, spawn `(4200,430)`, 634 chests, 46 signs.
+- Added crafting core, valid in-world labels, and paired character files.
+- Added five paired characters:
+  - `Astral_Warden.plr`
+  - `Nebula_Archivist.plr`
+  - `Vortex_Curator.plr`
+  - `Stardust_Keeper.plr`
+  - `Solar_Courier.plr`
+- Each paired character was saved and read back through TEdit's player loader with 20 valid inventory items.
+- Final world SHA-256: `E375627D06E640508E32E49DCEF7D5230C6C148A5C4BF1861E296CCE14672F99`

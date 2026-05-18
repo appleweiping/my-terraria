@@ -1,29 +1,4 @@
-```
-╔══════════════════════════════════════════════════════════════════════════════╗
-║  *  .    *       .   *    .        *   .       *    .   *       .    *     ║
-║     .        *        .       *         .   *      .        *       .      ║
-║  .     *  .       *      .        *  .      .   *     .  *      .     *    ║
-║─────────────────────────────────────────────────────────────────────────────║
-║                    ▓▓▓▓▓                                                   ║
-║                  ▓▓▓▓▓▓▓▓▓          ┌────────────┐                        ║
-║                ▓▓▓▓▓▓▓▓▓▓▓▓▓        │ ^^  ┌──┐  │                        ║
-║              ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓      │     │  │  │    /\                  ║
-║                  ║║║║║║              │ oo  │  │  │   /  \                 ║
-║                  ║║║║║║              │     └──┘  │  / /\ \                ║
-║     ___          ║║║║║║              └──┬────┬───┘ / /  \ \               ║
-║    [___]         ║║║║║║                 │    │    /________\              ║
-║    |   |                                │    │       ║║                    ║
-║                                                                            ║
-║          ♦♦♦  MY TERRARIA  --  Source-Traceable Save Archive  ♦♦♦          ║
-║                                                                            ║
-║▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒║
-║░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░║
-║▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓║
-║████████████████████████████████████████████████████████████████████████████║
-╚══════════════════════════════════════════════════════════════════════════════╝
-     Tree ^        Guide NPC ^        House ^         Pine Tree ^
-     Chest: [___]                     Slime: /\
-```
+![My Terraria](docs/banner.svg)
 
 # My Terraria
 
@@ -34,8 +9,7 @@
 <!-- ![LFS Verified](https://img.shields.io/badge/Git%20LFS-verified-blue) -->
 <!-- ![License](https://img.shields.io/github/license/appleweiping/my-terraria) -->
 
-<!-- Terraria Divider -->
-▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓
+![divider](docs/divider.svg)
 
 ## Overview
 
@@ -43,17 +17,17 @@ This repository is a structured, version-controlled archive of Terraria save dat
 
 The goal is not to collect saves indiscriminately. It is to maintain a high-signal archive where any save can be traced back to its origin, restored to a live Terraria installation in minutes, and extended by human or automated contributors without ambiguity about licensing or integrity.
 
-The archive currently holds **72 personal worlds**, **91 personal players**, **3 public third-party imports** with verified redistribution rights, **7 private-only saves** excluded from the public repository due to license restrictions, and **1 original flagship project** — the Astral Forge Vault — built from scratch as a large-scale master-mode archive hub.
+The archive currently holds **72 personal worlds**, **91 personal players**, **4 public third-party imports** with verified redistribution rights, **7 private-only saves** excluded from the public repository due to license restrictions, and **5 original projects** — including the Astral Forge Vault flagship — built from scratch as large-scale master-mode archive worlds.
 
 ```
 ┌─────────────────────────────────────────────────────┐
 │  << ARCHIVE INVENTORY >>                            │
 ├─────────────────────────────────────────────────────┤
 │                                                     │
-│  [W] Worlds:      72 personal + 4 original          │
-│  [P] Players:     91 personal + 12 original         │
-│  [I] Imports:     3 public, 7 private               │
-│  [*] Projects:    1 original flagship               │
+│  [W] Worlds:      72 personal + 5 original          │
+│  [P] Players:     91 personal + 17 original         │
+│  [I] Imports:     4 public, 7 private               │
+│  [*] Projects:    5 original flagship               │
 │  [F] Framework:   v2.0 (TerrariaAgent)              │
 │  [#] Integrity:   Git LFS + SHA-256                 │
 │                                                     │
@@ -62,8 +36,7 @@ The archive currently holds **72 personal worlds**, **91 personal players**, **3
 └─────────────────────────────────────────────────────┘
 ```
 
-<!-- Terraria Divider -->
-▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓
+![divider](docs/divider.svg)
 
 ## Architecture
 
@@ -74,10 +47,15 @@ my-terraria/
 │   ├── Worlds/               # 72 personal world files (.wld, .bak)
 │   └── imported/             # Public third-party imports (Git LFS)
 │       ├── story-of-red-cloud/
+│       ├── story-of-red-cloud-xelvaa-remix/
 │       ├── all-boss-battle-arenas/
 │       └── compact-all-items-hub-master/
 ├── originals/
-│   └── astral-forge-vault/   # Original flagship project
+│   ├── astral-forge-vault/   # Original flagship project
+│   ├── biome-encyclopedia/   # Every biome documented & labeled
+│   ├── boss-rush-colosseum/  # Every boss, arena-optimized
+│   ├── starter-academy/      # New player progression guide
+│   └── wiring-masterclass/   # Logic gates & mechanism demos
 ├── inventory/                # File inventory, analysis, hashes, restore guidance
 ├── external-sources/         # Source research, provenance records, import decisions
 ├── private-imports/          # .gitignored — license-restricted local backups
@@ -98,8 +76,7 @@ my-terraria/
 └── LICENSE                   # Repository license (original content)
 ```
 
-<!-- Terraria Divider -->
-▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓
+![divider](docs/divider.svg)
 
 ## Archive Contents
 
@@ -107,12 +84,11 @@ my-terraria/
 |----------|------:|---------|-------|
 | Personal worlds | 72 | Git LFS | All-item maps, farms, builds, challenge worlds |
 | Personal players | 91 | Git LFS | `.plr`, `.map`, `.bak` player data |
-| Public imports | 3 | Git LFS | Full provenance, redistribution-compatible |
+| Public imports | 4 | Git LFS | Full provenance, redistribution-compatible |
 | Private imports | 7 | Local only | `.gitignored`, All Rights Reserved sources |
-| Original projects | 1 | Git LFS | Astral Forge Vault (flagship) |
+| Original projects | 5 | Git LFS | Astral Forge Vault (flagship) + 4 themed builds |
 
-<!-- Terraria Divider -->
-▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓
+![divider](docs/divider.svg)
 
 ## Featured: Astral Forge Vault
 
@@ -141,8 +117,7 @@ The Astral Forge Vault is the repository's original flagship project — a purpo
 
 Design documentation, validation checklist, and restore notes are located in the `originals/astral-forge-vault/` directory.
 
-<!-- Terraria Divider -->
-▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓
+![divider](docs/divider.svg)
 
 ## Original Projects Showcase
 
@@ -162,8 +137,7 @@ Design documentation, validation checklist, and restore notes are located in the
 └──────────────────────────────────────────────────────────────────┘
 ```
 
-<!-- Terraria Divider -->
-▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓
+![divider](docs/divider.svg)
 
 ## Public Import Collection
 
@@ -172,13 +146,13 @@ All imports are real `.wld` files tracked with Git LFS. Each carries a `THIRD_PA
 | Save | Category | License | Path |
 |------|----------|---------|------|
 | The Story of Red Cloud | Adventure / RPG | Public Domain | `Terraria_saves/imported/story-of-red-cloud/` |
+| The Story of Red Cloud — Xelvaa Remix | Adventure / RPG / Dark Souls | Public Domain | `Terraria_saves/imported/story-of-red-cloud-xelvaa-remix/` |
 | All Boss Battle Arenas Expert | Boss arena / Combat utility | CC BY-NC 3.0 | `Terraria_saves/imported/all-boss-battle-arenas/` |
 | SUNV XTRA All Items Hub 1.4.5 Master | Compact all-items hub | GPL-3.0 | `Terraria_saves/imported/compact-all-items-hub-master/` |
 
 Full provenance records (source URLs, authors, file IDs, sizes, SHA-256 hashes, and import decisions) are maintained in `external-sources/2026-05-15-curseforge-imports.md`.
 
-<!-- Terraria Divider -->
-▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓
+![divider](docs/divider.svg)
 
 ## Terraria Agent Framework (v2.0)
 
@@ -215,8 +189,7 @@ $ dotnet run -- --spec my-world.json --output ./
 └──────────────────────────────────────────────────────────────────┘
 ```
 
-<!-- Terraria Divider -->
-▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓
+![divider](docs/divider.svg)
 
 ## Quick Start / Restore Guide
 
@@ -235,7 +208,7 @@ cd my-terraria
 git lfs pull
 
 # 2. Verify LFS integrity
-.\tools\verify-lfs.ps1
+.\.work\scripts\verify-lfs.ps1
 
 # 3. Restore worlds to Terraria
 Copy-Item "Terraria_saves\Worlds\*.wld" `
@@ -250,8 +223,7 @@ For imported or original subprojects, copy the specific `.wld` and `.plr` files 
 
 > **Warning:** Back up your existing Terraria saves before overwriting files in the live game folder.
 
-<!-- Terraria Divider -->
-▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓
+![divider](docs/divider.svg)
 
 ## Tooling
 
@@ -271,8 +243,7 @@ Run from the repository root:
 .\.work\scripts\build-astral-forge.ps1 -Clean
 ```
 
-<!-- Terraria Divider -->
-▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓
+![divider](docs/divider.svg)
 
 ## Contributing / Expansion
 
@@ -285,8 +256,7 @@ Contributions — whether from human collaborators or automated agents — must 
 5. **Record full provenance.** Source URL, author, file ID, SHA-256 hash, and observed license for every import.
 6. **Respect licensing.** Only saves with redistribution-compatible licenses enter the public repository. All Rights Reserved saves remain in `private-imports/`.
 
-<!-- Terraria Divider -->
-▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓
+![divider](docs/divider.svg)
 
 ## Governance
 
@@ -299,8 +269,7 @@ This repository is governed by strict rules defined in [`AGENTS.md`](AGENTS.md).
 
 Multi-agent collaboration is supported through [`CLAUDE.md`](CLAUDE.md) and [`CONTEXT.md`](CONTEXT.md), which provide domain context, handoff protocols, and coordination rules for concurrent agent sessions.
 
-<!-- Terraria Divider -->
-▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓
+![divider](docs/divider.svg)
 
 ## Roadmap
 
@@ -311,8 +280,7 @@ See [`docs/ROADMAP.md`](docs/ROADMAP.md) for planned milestones, including:
 - World metadata extraction and searchable index
 - Automated backup scheduling integration
 
-<!-- Terraria Divider -->
-▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓
+![divider](docs/divider.svg)
 
 ## License
 
@@ -320,13 +288,4 @@ Original content (text, scripts, project files) is licensed under the terms spec
 
 Third-party saves retain their original licenses as observed on their source pages. They are **not** relicensed by this repository. See [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) and each import's individual `THIRD_PARTY_NOTICE.md` for details.
 
-```
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-██████████████████████████████████████████████████████████████████████████████████
-▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-                         -- End of the World --
-              "You were slain by the Dungeon Guardian."
-▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-██████████████████████████████████████████████████████████████████████████████████
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-```
+![footer](docs/footer.svg)

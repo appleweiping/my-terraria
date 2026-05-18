@@ -1,0 +1,208 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="800" height="300">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" style="stop-color:#0d0d1a"/>
+      <stop offset="60%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+  </defs>
+  <!-- Sky background -->
+  <rect width="800" height="300" fill="url(#sky)"/>
+  <!-- Stars -->
+  <rect x="50" y="15" width="3" height="3" fill="#ffffff" opacity="0.9"/>
+  <rect x="120" y="30" width="2" height="2" fill="#ffffcc" opacity="0.7"/>
+  <rect x="200" y="10" width="3" height="3" fill="#ffffff" opacity="0.8"/>
+  <rect x="280" y="40" width="2" height="2" fill="#ffffcc" opacity="0.6"/>
+  <rect x="350" y="18" width="3" height="3" fill="#ffffff" opacity="0.9"/>
+  <rect x="420" y="8" width="2" height="2" fill="#ffffcc" opacity="0.7"/>
+  <rect x="500" y="35" width="3" height="3" fill="#ffffff" opacity="0.8"/>
+  <rect x="570" y="12" width="2" height="2" fill="#ffffcc" opacity="0.6"/>
+  <rect x="640" y="28" width="3" height="3" fill="#ffffff" opacity="0.9"/>
+  <rect x="710" y="5" width="2" height="2" fill="#ffffff" opacity="0.7"/>
+  <rect x="750" y="42" width="3" height="3" fill="#ffffcc" opacity="0.8"/>
+  <rect x="90" y="50" width="2" height="2" fill="#ffffff" opacity="0.5"/>
+  <rect x="160" y="55" width="2" height="2" fill="#ffffcc" opacity="0.6"/>
+  <rect x="450" y="52" width="2" height="2" fill="#ffffff" opacity="0.5"/>
+  <rect x="600" y="48" width="3" height="3" fill="#ffffcc" opacity="0.7"/>
+  <rect x="680" y="55" width="2" height="2" fill="#ffffff" opacity="0.6"/>
+  <!-- Moon -->
+  <circle cx="700" cy="45" r="18" fill="#f0e68c" opacity="0.9"/>
+  <circle cx="706" cy="40" r="15" fill="#0d0d1a"/>
+  <!-- Ground surface - grass layer -->
+  <rect x="0" y="180" width="800" height="6" fill="#4a7c3f"/>
+  <!-- Dirt layer -->
+  <rect x="0" y="186" width="800" height="40" fill="#8b6914"/>
+  <!-- Stone layer -->
+  <rect x="0" y="226" width="800" height="74" fill="#606060"/>
+  <!-- Grass tufts -->
+  <rect x="20" y="176" width="4" height="4" fill="#5a9c4f"/>
+  <rect x="60" y="174" width="4" height="6" fill="#5a9c4f"/>
+  <rect x="100" y="176" width="4" height="4" fill="#4a7c3f"/>
+  <rect x="250" y="176" width="4" height="4" fill="#5a9c4f"/>
+  <rect x="310" y="174" width="4" height="6" fill="#5a9c4f"/>
+  <rect x="550" y="176" width="4" height="4" fill="#5a9c4f"/>
+  <rect x="620" y="174" width="4" height="6" fill="#4a7c3f"/>
+  <rect x="720" y="176" width="4" height="4" fill="#5a9c4f"/>
+  <rect x="760" y="174" width="4" height="6" fill="#5a9c4f"/>
+  <!-- Tree (left side) - trunk -->
+  <rect x="80" y="130" width="8" height="50" fill="#6b4423"/>
+  <rect x="84" y="130" width="8" height="50" fill="#5a3a1e"/>
+  <!-- Tree - leaf canopy -->
+  <rect x="56" y="90" width="56" height="12" fill="#2d8a4e"/>
+  <rect x="50" y="102" width="68" height="12" fill="#2d8a4e"/>
+  <rect x="56" y="114" width="56" height="12" fill="#258040"/>
+  <rect x="62" y="126" width="44" height="8" fill="#258040"/>
+  <rect x="68" y="78" width="32" height="12" fill="#34a85a"/>
+  <!-- Leaf detail pixels -->
+  <rect x="54" y="94" width="4" height="4" fill="#34a85a"/>
+  <rect x="70" y="84" width="4" height="4" fill="#3dbd66"/>
+  <rect x="100" y="106" width="4" height="4" fill="#34a85a"/>
+  <rect x="62" y="110" width="4" height="4" fill="#3dbd66"/>
+  <!-- NPC House (center) -->
+  <!-- House base/floor -->
+  <rect x="320" y="140" width="120" height="40" fill="#a0522d"/>
+  <!-- House walls -->
+  <rect x="320" y="140" width="4" height="40" fill="#8b4513"/>
+  <rect x="436" y="140" width="4" height="40" fill="#8b4513"/>
+  <!-- House roof -->
+  <rect x="316" y="132" width="128" height="8" fill="#696969"/>
+  <rect x="320" y="126" width="120" height="6" fill="#808080"/>
+  <!-- House interior wall (darker) -->
+  <rect x="324" y="144" width="112" height="32" fill="#8b5e3c"/>
+  <!-- Door -->
+  <rect x="370" y="152" width="12" height="28" fill="#5a3a1e"/>
+  <rect x="374" y="156" width="4" height="4" fill="#daa520"/>
+  <!-- Window -->
+  <rect x="400" y="150" width="16" height="12" fill="#87ceeb" opacity="0.6"/>
+  <rect x="408" y="150" width="2" height="12" fill="#8b4513"/>
+  <rect x="400" y="155" width="16" height="2" fill="#8b4513"/>
+  <!-- Torch inside house -->
+  <rect x="420" y="148" width="4" height="8" fill="#6b4423"/>
+  <rect x="419" y="143" width="6" height="6" fill="#ff8c00"/>
+  <rect x="420" y="140" width="4" height="4" fill="#ffcc00"/>
+  <!-- Torch glow -->
+  <rect x="414" y="140" width="16" height="16" fill="#ff8c00" opacity="0.1"/>
+  <!-- Stone base of house -->
+  <rect x="320" y="172" width="120" height="8" fill="#696969"/>
+  <!-- Guide NPC (near house) -->
+  <!-- Head -->
+  <rect x="350" y="156" width="8" height="8" fill="#ffcc99"/>
+  <!-- Hair -->
+  <rect x="350" y="154" width="8" height="4" fill="#8b4513"/>
+  <!-- Body (yellow shirt) -->
+  <rect x="348" y="164" width="12" height="10" fill="#daa520"/>
+  <!-- Pants (brown) -->
+  <rect x="348" y="174" width="5" height="6" fill="#654321"/>
+  <rect x="355" y="174" width="5" height="6" fill="#654321"/>
+  <!-- Arms -->
+  <rect x="346" y="164" width="2" height="8" fill="#ffcc99"/>
+  <rect x="360" y="164" width="2" height="8" fill="#ffcc99"/>
+  <!-- Chest (on ground, left of house) -->
+  <rect x="270" y="168" width="20" height="12" fill="#daa520"/>
+  <rect x="270" y="166" width="20" height="4" fill="#b8860b"/>
+  <rect x="278" y="167" width="4" height="3" fill="#ffcc00"/>
+  <!-- Chest lock -->
+  <rect x="279" y="172" width="2" height="2" fill="#8b6914"/>
+  <!-- Slime (right side) -->
+  <!-- Slime body -->
+  <rect x="620" y="160" width="32" height="20" fill="#4169e1" opacity="0.8"/>
+  <rect x="624" y="156" width="24" height="4" fill="#4169e1" opacity="0.7"/>
+  <rect x="628" y="152" width="16" height="4" fill="#4169e1" opacity="0.6"/>
+  <rect x="616" y="168" width="4" height="12" fill="#4169e1" opacity="0.6"/>
+  <rect x="652" y="168" width="4" height="12" fill="#4169e1" opacity="0.6"/>
+  <!-- Slime eyes -->
+  <rect x="630" y="162" width="4" height="4" fill="#ffffff"/>
+  <rect x="640" y="162" width="4" height="4" fill="#ffffff"/>
+  <rect x="632" y="164" width="2" height="2" fill="#000000"/>
+  <rect x="642" y="164" width="2" height="2" fill="#000000"/>
+  <!-- Slime shine -->
+  <rect x="626" y="154" width="4" height="3" fill="#6495ed" opacity="0.5"/>
+  <!-- Underground cave -->
+  <rect x="200" y="240" width="80" height="40" fill="#2a2a2a"/>
+  <rect x="210" y="235" width="60" height="10" fill="#3a3a3a"/>
+  <!-- Gems in cave -->
+  <rect x="220" y="255" width="4" height="6" fill="#9b59b6"/>
+  <rect x="224" y="257" width="4" height="4" fill="#8e44ad"/>
+  <rect x="250" y="250" width="4" height="6" fill="#e74c3c"/>
+  <rect x="254" y="252" width="4" height="4" fill="#c0392b"/>
+  <rect x="265" y="260" width="4" height="6" fill="#3498db"/>
+  <rect x="269" y="262" width="4" height="4" fill="#2980b9"/>
+  <!-- Stone texture details -->
+  <rect x="30" y="240" width="6" height="4" fill="#707070"/>
+  <rect x="100" y="260" width="8" height="4" fill="#555555"/>
+  <rect x="400" y="250" width="6" height="6" fill="#707070"/>
+  <rect x="500" y="235" width="8" height="4" fill="#555555"/>
+  <rect x="600" y="270" width="6" height="4" fill="#707070"/>
+  <rect x="700" y="245" width="8" height="6" fill="#555555"/>
+  <!-- Corruption hint (far right underground) -->
+  <rect x="680" y="240" width="40" height="20" fill="#800080" opacity="0.3"/>
+  <rect x="690" y="245" width="4" height="10" fill="#9932cc" opacity="0.5"/>
+  <rect x="700" y="248" width="4" height="8" fill="#9932cc" opacity="0.4"/>
+  <rect x="710" y="243" width="4" height="12" fill="#9932cc" opacity="0.5"/>
+  <!-- Hallow hint (far left underground) -->
+  <rect x="10" y="250" width="30" height="15" fill="#ff69b4" opacity="0.2"/>
+  <rect x="15" y="255" width="4" height="6" fill="#ff1493" opacity="0.4"/>
+  <rect x="25" y="252" width="4" height="8" fill="#da70d6" opacity="0.4"/>
+  <!-- Water pool -->
+  <rect x="500" y="250" width="50" height="20" fill="#1e90ff" opacity="0.6"/>
+  <rect x="505" y="248" width="40" height="4" fill="#1e90ff" opacity="0.4"/>
+  <!-- Title text: "MY TERRARIA" in pixel font -->
+  <!-- Letter M -->
+  <rect x="230" y="68" width="4" height="20" fill="#ffffff"/>
+  <rect x="234" y="72" width="4" height="4" fill="#ffffff"/>
+  <rect x="238" y="76" width="4" height="4" fill="#ffffff"/>
+  <rect x="242" y="72" width="4" height="4" fill="#ffffff"/>
+  <rect x="246" y="68" width="4" height="20" fill="#ffffff"/>
+  <!-- Letter Y -->
+  <rect x="254" y="68" width="4" height="8" fill="#ffffff"/>
+  <rect x="258" y="76" width="4" height="4" fill="#ffffff"/>
+  <rect x="262" y="80" width="4" height="8" fill="#ffffff"/>
+  <rect x="266" y="76" width="4" height="4" fill="#ffffff"/>
+  <rect x="270" y="68" width="4" height="8" fill="#ffffff"/>
+  <!-- Space -->
+  <!-- Letter T -->
+  <rect x="282" y="68" width="20" height="4" fill="#ffffff"/>
+  <rect x="290" y="72" width="4" height="16" fill="#ffffff"/>
+  <!-- Letter E -->
+  <rect x="306" y="68" width="4" height="20" fill="#ffffff"/>
+  <rect x="310" y="68" width="12" height="4" fill="#ffffff"/>
+  <rect x="310" y="76" width="8" height="4" fill="#ffffff"/>
+  <rect x="310" y="84" width="12" height="4" fill="#ffffff"/>
+  <!-- Letter R -->
+  <rect x="326" y="68" width="4" height="20" fill="#ffffff"/>
+  <rect x="330" y="68" width="12" height="4" fill="#ffffff"/>
+  <rect x="342" y="72" width="4" height="4" fill="#ffffff"/>
+  <rect x="330" y="76" width="12" height="4" fill="#ffffff"/>
+  <rect x="338" y="80" width="4" height="4" fill="#ffffff"/>
+  <rect x="342" y="84" width="4" height="4" fill="#ffffff"/>
+  <!-- Letter R -->
+  <rect x="350" y="68" width="4" height="20" fill="#ffffff"/>
+  <rect x="354" y="68" width="12" height="4" fill="#ffffff"/>
+  <rect x="366" y="72" width="4" height="4" fill="#ffffff"/>
+  <rect x="354" y="76" width="12" height="4" fill="#ffffff"/>
+  <rect x="362" y="80" width="4" height="4" fill="#ffffff"/>
+  <rect x="366" y="84" width="4" height="4" fill="#ffffff"/>
+  <!-- Letter A -->
+  <rect x="374" y="72" width="4" height="16" fill="#ffffff"/>
+  <rect x="378" y="68" width="8" height="4" fill="#ffffff"/>
+  <rect x="386" y="72" width="4" height="16" fill="#ffffff"/>
+  <rect x="378" y="78" width="8" height="4" fill="#ffffff"/>
+  <!-- Letter R -->
+  <rect x="394" y="68" width="4" height="20" fill="#ffffff"/>
+  <rect x="398" y="68" width="12" height="4" fill="#ffffff"/>
+  <rect x="410" y="72" width="4" height="4" fill="#ffffff"/>
+  <rect x="398" y="76" width="12" height="4" fill="#ffffff"/>
+  <rect x="406" y="80" width="4" height="4" fill="#ffffff"/>
+  <rect x="410" y="84" width="4" height="4" fill="#ffffff"/>
+  <!-- Letter I -->
+  <rect x="418" y="68" width="4" height="20" fill="#ffffff"/>
+  <!-- Letter A -->
+  <rect x="426" y="72" width="4" height="16" fill="#ffffff"/>
+  <rect x="430" y="68" width="8" height="4" fill="#ffffff"/>
+  <rect x="438" y="72" width="4" height="16" fill="#ffffff"/>
+  <rect x="430" y="78" width="8" height="4" fill="#ffffff"/>
+  <!-- Subtitle text -->
+  <text x="400" y="105" text-anchor="middle" style="font-family:monospace;font-size:11px;fill:#aaaaaa;letter-spacing:1px;">Source-Traceable Save Archive</text>
+  <!-- Decorative border pixels at bottom -->
+  <rect x="0" y="296" width="800" height="4" fill="#4a7c3f"/>
+</svg>

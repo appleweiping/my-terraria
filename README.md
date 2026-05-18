@@ -1,125 +1,207 @@
-# My Terraria Archive
+# My Terraria
 
-A source-traceable Terraria save archive: local player/world backups, curated third-party imports, and original non-toy save projects built to be restored, inspected, extended, and versioned.
+**A source-traceable Terraria save archive with curated imports, original projects, and automated tooling.**
 
-This is not a screenshot gallery or a loose pile of downloads. The repository is maintained as an archive project: binary saves are stored with Git LFS, third-party sources are recorded with provenance and hashes, and future expansion rules live in `AGENTS.md`.
+<!-- Badges (CI/CD placeholders) -->
+<!-- ![Build Status](https://img.shields.io/github/actions/workflow/status/appleweiping/my-terraria/ci.yml?branch=main) -->
+<!-- ![LFS Verified](https://img.shields.io/badge/Git%20LFS-verified-blue) -->
+<!-- ![License](https://img.shields.io/github/license/appleweiping/my-terraria) -->
 
-## What Is Inside
+---
 
-| Area | Purpose | Contents |
-|---|---|---|
-| `Terraria_saves/Players/` | User/player archive | Local `.plr`, `.map`, and `.bak` player data backed up from this machine. |
-| `Terraria_saves/Worlds/` | User/world archive | Local `.wld` and `.bak` worlds, including all-item maps, farms, builds, challenge worlds, and existing personal saves. |
-| `Terraria_saves/imported/` | Public third-party imports | Curated external saves whose source pages show redistribution-compatible licenses, each with a `THIRD_PARTY_NOTICE.md`. |
-| `originals/astral-forge-vault/` | Original flagship project | A vanilla 1.4.x large master `getfixedboi` world upgraded with an archive hub, arenas, farms, transit, labels, chests, and paired characters. |
-| `inventory/` | Audit layer | File inventory, analysis, hashes, restore guidance, and expansion log. |
-| `external-sources/` | Source research | Candidate scans, import decisions, download provenance, source URLs, file ids, and SHA-256 records. |
-| `private-imports/` | Local-only private cache | High-signal third-party saves with restrictive or unclear redistribution terms. This path is intentionally ignored by Git. |
+## Overview
 
-## Current Public Import Set
+This repository is a structured, version-controlled archive of Terraria save data — personal worlds, personal players, curated third-party imports, and original flagship builds. Every binary is stored via Git LFS, every import carries full provenance (source URL, author, file ID, SHA-256 hash, license), and every expansion follows documented governance rules.
 
-These are real `.wld` files tracked with Git LFS, not placeholder documentation.
+The goal is not to collect saves indiscriminately. It is to maintain a high-signal archive where any save can be traced back to its origin, restored to a live Terraria installation in minutes, and extended by human or automated contributors without ambiguity about licensing or integrity.
 
-| Save | Type | Source license observed | Path |
-|---|---|---|---|
-| The Story of Red Cloud | Adventure / RPG world | Public Domain | `Terraria_saves/imported/story-of-red-cloud/the-story-of-red-cloud.wld` |
-| All Boss Battle Arenas Expert | Boss arena / combat utility | Creative Commons Attribution-NonCommercial 3.0 Unported | `Terraria_saves/imported/all-boss-battle-arenas/All Boss Battle Arenas Expert.wld` |
-| SUNV XTRA All Items Hub 1.4.5 Master | Compact all-items hub | GNU General Public License version 3 | `Terraria_saves/imported/compact-all-items-hub-master/SUNV-XTRA-All-ITEMS-HUB-1.4.5-Master.wld` |
+The archive currently holds **72 personal worlds**, **91 personal players**, **3 public third-party imports** with verified redistribution rights, **7 private-only saves** excluded from the public repository due to license restrictions, and **1 original flagship project** — the Astral Forge Vault — built from scratch as a large-scale master-mode archive hub.
 
-See `external-sources/2026-05-15-curseforge-imports.md` for source URLs, authors, file ids, sizes, SHA-256 hashes, and the private/public import decision for the full CurseForge batch.
+---
 
-## Local Private Backup Set
+## Architecture
 
-The following real third-party save files were downloaded to `D:\Terraria_doc\private-imports\2026-05-15-curseforge` on the archive machine:
-
-| Save | Category | Local status |
-|---|---|---|
-| Builder's Workshop | canonical all-items worlds | Private-only local backup, not pushed while the repo is public. |
-| Ztorage Zystem | storage worlds plus matching players | Private-only local backup, not pushed while the repo is public. |
-| The Shimmer Lands | visual all-items hub | Private-only local backup, not pushed while the repo is public. |
-| Khaiostomization | building/customization showcase | Private-only local backup, not pushed while the repo is public. |
-| Scopey 1.4.5 All Items | current-version all-items world | Private-only local backup, not pushed while the repo is public. |
-| Starter World 1.4.4.9 Master | starter/progression utility | Private-only local backup, not pushed while the repo is public. |
-| The Kingdom | building/settlement world | Private-only local backup, not pushed while the repo is public. |
-
-Those files are intentionally excluded by `.gitignore` because this GitHub repository is currently public and the source pages showed All Rights Reserved. If this repository is made private, they can be promoted into a private Git LFS area in source-by-source commits while preserving notices and hashes.
-
-## Original Flagship: Astral Forge Vault
-
-`originals/astral-forge-vault/` is the first original save project in the archive.
-
-- World: `Astral_Forge_Vault.wld`
-- Terraria profile: vanilla 1.4.x, large master, `getfixedboi` seed base
-- Final read-back title: `Astral Forge Vault - Ultimate Archive`
-- Final read-back spawn: `(4200,430)`
-- Final read-back content markers: 634 chests, 46 signs
-- Paired characters:
-  - `Astral_Warden.plr`
-  - `Nebula_Archivist.plr`
-  - `Vortex_Curator.plr`
-  - `Stardust_Keeper.plr`
-  - `Solar_Courier.plr`
-
-The design, validation checklist, and restore notes are in `originals/astral-forge-vault/README.md`, `design.md`, and `acceptance-checklist.md`.
-
-## Restore Guide
-
-1. Install Git LFS before cloning:
-
-   ```powershell
-   git lfs install
-   git clone https://github.com/appleweiping/my-terraria.git
-   cd my-terraria
-   git lfs pull
-   ```
-
-2. Copy world files into the Terraria worlds folder:
-
-   ```powershell
-   Copy-Item -LiteralPath "Terraria_saves\Worlds\*.wld" -Destination "$env:USERPROFILE\Documents\My Games\Terraria\Worlds" -Force
-   ```
-
-3. Copy player files into the Terraria players folder:
-
-   ```powershell
-   Copy-Item -LiteralPath "Terraria_saves\Players\*.plr" -Destination "$env:USERPROFILE\Documents\My Games\Terraria\Players" -Force
-   ```
-
-4. For imported or original subprojects, copy the specific `.wld` and `.plr` files from their project folders into the same Terraria `Worlds` and `Players` restore locations.
-
-Back up existing Terraria saves before overwriting files in the live game folder.
-
-## Verification
-
-Useful checks:
-
-```powershell
-git lfs status
-git lfs ls-files
-Get-FileHash -Algorithm SHA256 -LiteralPath "path\to\save.wld"
+```
+my-terraria/
+├── Terraria_saves/
+│   ├── Players/              # 91 personal player files (.plr, .map, .bak)
+│   ├── Worlds/               # 72 personal world files (.wld, .bak)
+│   └── imported/             # Public third-party imports (Git LFS)
+│       ├── story-of-red-cloud/
+│       ├── all-boss-battle-arenas/
+│       └── compact-all-items-hub-master/
+├── originals/
+│   └── astral-forge-vault/   # Original flagship project
+├── inventory/                # File inventory, analysis, hashes, restore guidance
+├── external-sources/         # Source research, provenance records, import decisions
+├── private-imports/          # .gitignored — license-restricted local backups
+├── .work/                    # .gitignored — local tooling and automation
+│   ├── scripts/
+│   │   ├── verify-lfs.ps1       # LFS pointer integrity verification
+│   │   ├── hash-check.ps1       # SHA-256 hash validation against records
+│   │   └── build-astral-forge.ps1  # Astral Forge Vault build/rebuild
+│   ├── AstralForgeBuilder/      # C# world builder project
+│   ├── dotnet/                  # Local .NET SDK
+│   └── Terraria-Map-Editor/     # TEdit (local copy)
+├── docs/
+│   └── ROADMAP.md            # Project roadmap and planned milestones
+├── AGENTS.md                 # Governance rules for automated contributors
+├── CLAUDE.md                 # Multi-agent collaboration configuration
+├── CONTEXT.md                # Domain context for agent handoffs
+├── THIRD_PARTY_NOTICES.md    # Aggregated third-party license notices
+└── LICENSE                   # Repository license (original content)
 ```
 
-The archive's maintained records live in:
+---
 
-- `inventory/terraria-file-inventory.csv`
-- `inventory/terraria-file-analysis.md`
-- `inventory/expansion-log.md`
-- `external-sources/2026-05-15-curseforge-imports.md`
+## Archive Contents
 
-## Expansion Rules
+| Category | Count | Storage | Notes |
+|----------|------:|---------|-------|
+| Personal worlds | 72 | Git LFS | All-item maps, farms, builds, challenge worlds |
+| Personal players | 91 | Git LFS | `.plr`, `.map`, `.bak` player data |
+| Public imports | 3 | Git LFS | Full provenance, redistribution-compatible |
+| Private imports | 7 | Local only | `.gitignored`, All Rights Reserved sources |
+| Original projects | 1 | Git LFS | Astral Forge Vault (flagship) |
 
-Future agents should follow `AGENTS.md`:
+---
 
-- Search broadly: GitHub, CurseForge, Steam Workshop, official forums, and known community map pages.
-- Prefer high-signal saves: popular, novel, complete, actively maintained, well-documented, or structurally different from the current archive.
-- Preserve complete save sets: `.wld`, `.plr`, `.map`, `.bak`, `.twld`, `.tplr`, archives, readmes, mod lists, and source notes when they belong together.
-- Use Git LFS for binary save files.
-- Keep source provenance and SHA-256 hashes for every import.
-- Do not present toy/demo saves as final original work.
+## Featured: Astral Forge Vault
 
-## Licensing
+The Astral Forge Vault is the repository's original flagship project — a purpose-built archive hub world designed for maximum utility and completeness.
 
-Repository text and original project material use the root `LICENSE` unless a file says otherwise.
+| Property | Value |
+|----------|-------|
+| World file | `originals/astral-forge-vault/Astral_Forge_Vault.wld` |
+| Profile | Vanilla 1.4.x, Large, Master mode |
+| Seed | `getfixedboi` base |
+| Title | Astral Forge Vault - Ultimate Archive |
+| Spawn | `(4200, 430)` |
+| Chests | 634 |
+| Signs | 46 |
+| Paired characters | 5 |
 
-Third-party saves keep their original source-page license or permission status and are not relicensed as MIT by this repository. See `THIRD_PARTY_NOTICES.md` and each imported save's `THIRD_PARTY_NOTICE.md`.
+### Paired Characters
 
+| Character | File |
+|-----------|------|
+| Astral Warden | `Astral_Warden.plr` |
+| Nebula Archivist | `Nebula_Archivist.plr` |
+| Vortex Curator | `Vortex_Curator.plr` |
+| Stardust Keeper | `Stardust_Keeper.plr` |
+| Solar Courier | `Solar_Courier.plr` |
+
+Design documentation, validation checklist, and restore notes are located in the `originals/astral-forge-vault/` directory.
+
+---
+
+## Public Import Collection
+
+All imports are real `.wld` files tracked with Git LFS. Each carries a `THIRD_PARTY_NOTICE.md` with source attribution.
+
+| Save | Category | License | Path |
+|------|----------|---------|------|
+| The Story of Red Cloud | Adventure / RPG | Public Domain | `Terraria_saves/imported/story-of-red-cloud/` |
+| All Boss Battle Arenas Expert | Boss arena / Combat utility | CC BY-NC 3.0 | `Terraria_saves/imported/all-boss-battle-arenas/` |
+| SUNV XTRA All Items Hub 1.4.5 Master | Compact all-items hub | GPL-3.0 | `Terraria_saves/imported/compact-all-items-hub-master/` |
+
+Full provenance records (source URLs, authors, file IDs, sizes, SHA-256 hashes, and import decisions) are maintained in `external-sources/2026-05-15-curseforge-imports.md`.
+
+---
+
+## Quick Start / Restore Guide
+
+### Prerequisites
+
+- [Git LFS](https://git-lfs.github.com/) installed and initialized
+- Terraria (Steam or GOG) installed on the target machine
+
+### Clone and Restore
+
+```powershell
+# 1. Clone with LFS support
+git lfs install
+git clone https://github.com/appleweiping/my-terraria.git
+cd my-terraria
+git lfs pull
+
+# 2. Verify LFS integrity
+.\tools\verify-lfs.ps1
+
+# 3. Restore worlds to Terraria
+Copy-Item "Terraria_saves\Worlds\*.wld" `
+    -Destination "$env:USERPROFILE\Documents\My Games\Terraria\Worlds" -Force
+
+# 4. Restore players to Terraria
+Copy-Item "Terraria_saves\Players\*.plr" `
+    -Destination "$env:USERPROFILE\Documents\My Games\Terraria\Players" -Force
+```
+
+For imported or original subprojects, copy the specific `.wld` and `.plr` files from their project folders into the same Terraria `Worlds` and `Players` directories.
+
+> **Warning:** Back up your existing Terraria saves before overwriting files in the live game folder.
+
+---
+
+## Tooling
+
+Automated scripts in `.work/scripts/` support archive maintenance and validation. The `.work/` directory is gitignored (local tooling only), but the scripts are documented here for reproducibility.
+
+| Script | Purpose |
+|--------|---------|
+| `verify-lfs.ps1` | Validates that all binary save files are properly tracked by Git LFS. Use `-Fix` to auto-stage missing files. |
+| `hash-check.ps1` | Compares current file SHA-256 hashes against provenance records. Use `-UpdateInventory` to export results. |
+| `build-astral-forge.ps1` | Builds and runs the AstralForgeBuilder C# project. Use `-Clean` for fresh builds. |
+
+Run from the repository root:
+
+```powershell
+.\.work\scripts\verify-lfs.ps1
+.\.work\scripts\hash-check.ps1
+.\.work\scripts\build-astral-forge.ps1 -Clean
+```
+
+---
+
+## Contributing / Expansion
+
+Contributions — whether from human collaborators or automated agents — must follow the expansion protocol defined in `AGENTS.md`. Key principles:
+
+1. **Search broadly.** GitHub, CurseForge, Steam Workshop, official forums, and known community map pages are all valid sources.
+2. **Prefer high-signal saves.** Popular, novel, complete, actively maintained, well-documented, or structurally different from the current archive.
+3. **Preserve complete save sets.** Include `.wld`, `.plr`, `.map`, `.bak`, `.twld`, `.tplr`, archives, readmes, mod lists, and source notes when they belong together.
+4. **Use Git LFS** for all binary save files without exception.
+5. **Record full provenance.** Source URL, author, file ID, SHA-256 hash, and observed license for every import.
+6. **Respect licensing.** Only saves with redistribution-compatible licenses enter the public repository. All Rights Reserved saves remain in `private-imports/`.
+
+---
+
+## Governance
+
+This repository is governed by strict rules defined in [`AGENTS.md`](AGENTS.md). The governance model covers:
+
+- Permitted and prohibited actions for automated contributors
+- Import criteria and quality thresholds
+- Provenance and hash verification requirements
+- Commit message conventions and branch policies
+
+Multi-agent collaboration is supported through [`CLAUDE.md`](CLAUDE.md) and [`CONTEXT.md`](CONTEXT.md), which provide domain context, handoff protocols, and coordination rules for concurrent agent sessions.
+
+---
+
+## Roadmap
+
+See [`docs/ROADMAP.md`](docs/ROADMAP.md) for planned milestones, including:
+
+- CI pipeline for automated LFS and hash verification
+- Expanded import coverage from additional community sources
+- World metadata extraction and searchable index
+- Automated backup scheduling integration
+
+---
+
+## License
+
+Original content (text, scripts, project files) is licensed under the terms specified in [`LICENSE`](LICENSE).
+
+Third-party saves retain their original licenses as observed on their source pages. They are **not** relicensed by this repository. See [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) and each import's individual `THIRD_PARTY_NOTICE.md` for details.

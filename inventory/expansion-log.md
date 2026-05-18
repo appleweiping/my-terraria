@@ -56,3 +56,24 @@
   - Scopey 1.4.5 All Items
   - Starter World 1.4.4.9 Master
   - The Kingdom
+
+## 2026-05-18
+
+### Adventure/Story Map Research
+
+- Added `external-sources/2026-05-18-adventure-map-research.md`.
+- Researched Terraria adventure maps across GitHub, CurseForge, and Terraria Community Forums for redistribution-compatible licenses.
+- Finding: The adventure map ecosystem is dominated by Steam Workshop (not redistributable) and CurseForge maps with All Rights Reserved or unverifiable licenses.
+- CurseForge individual pages returned HTTP 403, blocking license verification for most candidates (Skyblock Challenge, Ultirraria, World of Terra, etc.).
+- Only one new PUBLIC-compatible adventure map file identified: The Story of Red Cloud Xelvaa Remix from GitHub.
+
+### New Public Import
+
+- Imported `Terraria_saves/imported/story-of-red-cloud-xelvaa-remix/the-story-of-red-cloud-xelvaa-remix.wld`
+  - Source: https://github.com/timhjersted/tsorcDownload/blob/1.4.4/the-story-of-red-cloud-xelvaa-remix.wld
+  - Author: Tim Hjersted (vibrent) / Xelvaa (remixer)
+  - License basis: CurseForge Public Domain marking + GitHub README explicit remix permission + companion mod GPL-3.0
+  - Size: 9,821,896 bytes
+  - SHA-256: `3f6751970eed40c81772fe3f961c640975a32d4207b8d488c0a94b742655aaeb`
+  - Note: Requires tsorcRevamp tModLoader mod for intended gameplay experience
+  - THIRD_PARTY_NOTICE.md created alongside the file

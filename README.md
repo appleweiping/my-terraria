@@ -1,3 +1,30 @@
+```
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  *  .    *       .   *    .        *   .       *    .   *       .    *     ║
+║     .        *        .       *         .   *      .        *       .      ║
+║  .     *  .       *      .        *  .      .   *     .  *      .     *    ║
+║─────────────────────────────────────────────────────────────────────────────║
+║                    ▓▓▓▓▓                                                   ║
+║                  ▓▓▓▓▓▓▓▓▓          ┌────────────┐                        ║
+║                ▓▓▓▓▓▓▓▓▓▓▓▓▓        │ ^^  ┌──┐  │                        ║
+║              ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓      │     │  │  │    /\                  ║
+║                  ║║║║║║              │ oo  │  │  │   /  \                 ║
+║                  ║║║║║║              │     └──┘  │  / /\ \                ║
+║     ___          ║║║║║║              └──┬────┬───┘ / /  \ \               ║
+║    [___]         ║║║║║║                 │    │    /________\              ║
+║    |   |                                │    │       ║║                    ║
+║                                                                            ║
+║          ♦♦♦  MY TERRARIA  --  Source-Traceable Save Archive  ♦♦♦          ║
+║                                                                            ║
+║▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒║
+║░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░║
+║▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓║
+║████████████████████████████████████████████████████████████████████████████║
+╚══════════════════════════════════════════════════════════════════════════════╝
+     Tree ^        Guide NPC ^        House ^         Pine Tree ^
+     Chest: [___]                     Slime: /\
+```
+
 # My Terraria
 
 **A source-traceable Terraria save archive with curated imports, original projects, and automated tooling.**
@@ -7,7 +34,8 @@
 <!-- ![LFS Verified](https://img.shields.io/badge/Git%20LFS-verified-blue) -->
 <!-- ![License](https://img.shields.io/github/license/appleweiping/my-terraria) -->
 
----
+<!-- Terraria Divider -->
+▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓
 
 ## Overview
 
@@ -17,7 +45,25 @@ The goal is not to collect saves indiscriminately. It is to maintain a high-sign
 
 The archive currently holds **72 personal worlds**, **91 personal players**, **3 public third-party imports** with verified redistribution rights, **7 private-only saves** excluded from the public repository due to license restrictions, and **1 original flagship project** — the Astral Forge Vault — built from scratch as a large-scale master-mode archive hub.
 
----
+```
+┌─────────────────────────────────────────────────────┐
+│  << ARCHIVE INVENTORY >>                            │
+├─────────────────────────────────────────────────────┤
+│                                                     │
+│  [W] Worlds:      72 personal + 4 original          │
+│  [P] Players:     91 personal + 12 original         │
+│  [I] Imports:     3 public, 7 private               │
+│  [*] Projects:    1 original flagship               │
+│  [F] Framework:   v2.0 (TerrariaAgent)              │
+│  [#] Integrity:   Git LFS + SHA-256                 │
+│                                                     │
+│  Status: VERIFIED -- All hashes match               │
+│                                                     │
+└─────────────────────────────────────────────────────┘
+```
+
+<!-- Terraria Divider -->
+▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓
 
 ## Architecture
 
@@ -52,7 +98,8 @@ my-terraria/
 └── LICENSE                   # Repository license (original content)
 ```
 
----
+<!-- Terraria Divider -->
+▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓
 
 ## Archive Contents
 
@@ -64,7 +111,8 @@ my-terraria/
 | Private imports | 7 | Local only | `.gitignored`, All Rights Reserved sources |
 | Original projects | 1 | Git LFS | Astral Forge Vault (flagship) |
 
----
+<!-- Terraria Divider -->
+▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓
 
 ## Featured: Astral Forge Vault
 
@@ -93,7 +141,29 @@ The Astral Forge Vault is the repository's original flagship project — a purpo
 
 Design documentation, validation checklist, and restore notes are located in the `originals/astral-forge-vault/` directory.
 
----
+<!-- Terraria Divider -->
+▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓
+
+## Original Projects Showcase
+
+```
+┌──────────────────────────────────────────────────────────────────┐
+│  << ORIGINAL BUILDS >>                                           │
+├──────────────────────────────────────────────────────────────────┤
+│                                                                  │
+│  [=] Astral Forge Vault    -- Ultimate storage archive hub       │
+│  [B] Biome Encyclopedia    -- Every biome documented & labeled   │
+│  [W] Wiring Masterclass    -- Logic gates & mechanism demos      │
+│  [X] Boss Rush Colosseum   -- Every boss, arena-optimized        │
+│  [>] Starter Academy       -- New player progression guide       │
+│                                                                  │
+│  Status: 1 complete, 4 planned (see ROADMAP.md)                  │
+│                                                                  │
+└──────────────────────────────────────────────────────────────────┘
+```
+
+<!-- Terraria Divider -->
+▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓
 
 ## Public Import Collection
 
@@ -107,7 +177,46 @@ All imports are real `.wld` files tracked with Git LFS. Each carries a `THIRD_PA
 
 Full provenance records (source URLs, authors, file IDs, sizes, SHA-256 hashes, and import decisions) are maintained in `external-sources/2026-05-15-curseforge-imports.md`.
 
----
+<!-- Terraria Divider -->
+▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓
+
+## Terraria Agent Framework (v2.0)
+
+Generate worlds and characters from simple descriptions:
+
+```
+$ dotnet run -- --spec my-world.json --output ./
+
+[*] Loading base world template...
+[*] Placing 15 biome sections...
+[*] Building castle at (1000, 400)...
+[*] Creating teleporter network...
+[*] Generating 5 paired characters...
+[*] Validating chest inventory (634 chests)...
+[*] Computing SHA-256 integrity hash...
+[*] Done. Output: My_Epic_World.wld (11.3 MB)
+```
+
+```
+┌──────────────────────────────────────────────────────────────────┐
+│  << FRAMEWORK CAPABILITIES >>                                    │
+├──────────────────────────────────────────────────────────────────┤
+│                                                                  │
+│  [+] Programmatic world generation from JSON specs               │
+│  [+] Automated NPC housing placement & validation                │
+│  [+] Chest inventory population (all 5450+ items)                │
+│  [+] Teleporter network wiring                                   │
+│  [+] Biome painting & block placement                            │
+│  [+] Character creation with loadouts                            │
+│  [+] SHA-256 integrity verification on output                    │
+│                                                                  │
+│  Built on: .NET 8 + TEdit core libraries                         │
+│                                                                  │
+└──────────────────────────────────────────────────────────────────┘
+```
+
+<!-- Terraria Divider -->
+▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓
 
 ## Quick Start / Restore Guide
 
@@ -141,7 +250,8 @@ For imported or original subprojects, copy the specific `.wld` and `.plr` files 
 
 > **Warning:** Back up your existing Terraria saves before overwriting files in the live game folder.
 
----
+<!-- Terraria Divider -->
+▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓
 
 ## Tooling
 
@@ -161,7 +271,8 @@ Run from the repository root:
 .\.work\scripts\build-astral-forge.ps1 -Clean
 ```
 
----
+<!-- Terraria Divider -->
+▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓
 
 ## Contributing / Expansion
 
@@ -174,7 +285,8 @@ Contributions — whether from human collaborators or automated agents — must 
 5. **Record full provenance.** Source URL, author, file ID, SHA-256 hash, and observed license for every import.
 6. **Respect licensing.** Only saves with redistribution-compatible licenses enter the public repository. All Rights Reserved saves remain in `private-imports/`.
 
----
+<!-- Terraria Divider -->
+▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓
 
 ## Governance
 
@@ -187,7 +299,8 @@ This repository is governed by strict rules defined in [`AGENTS.md`](AGENTS.md).
 
 Multi-agent collaboration is supported through [`CLAUDE.md`](CLAUDE.md) and [`CONTEXT.md`](CONTEXT.md), which provide domain context, handoff protocols, and coordination rules for concurrent agent sessions.
 
----
+<!-- Terraria Divider -->
+▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓
 
 ## Roadmap
 
@@ -198,10 +311,22 @@ See [`docs/ROADMAP.md`](docs/ROADMAP.md) for planned milestones, including:
 - World metadata extraction and searchable index
 - Automated backup scheduling integration
 
----
+<!-- Terraria Divider -->
+▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓░▒░▓
 
 ## License
 
 Original content (text, scripts, project files) is licensed under the terms specified in [`LICENSE`](LICENSE).
 
 Third-party saves retain their original licenses as observed on their source pages. They are **not** relicensed by this repository. See [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) and each import's individual `THIRD_PARTY_NOTICE.md` for details.
+
+```
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+██████████████████████████████████████████████████████████████████████████████████
+▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+                         -- End of the World --
+              "You were slain by the Dungeon Guardian."
+▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+██████████████████████████████████████████████████████████████████████████████████
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+```

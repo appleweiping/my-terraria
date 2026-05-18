@@ -1,17 +1,21 @@
 # Project Context
 
-## Current State (as of 2026-05-18)
+## Current State (as of 2026-05-19)
 
 | Metric | Value |
 |--------|-------|
 | Personal worlds | 72 |
 | Personal players | 91 |
-| Public third-party imports | 3 |
+| Public third-party imports | 4 |
 | Private-only third-party saves | 7 |
-| Original projects | 1 (Astral Forge Vault v1.0) |
-| Total tracked binary files | ~300+ |
+| Original projects | 5 (Astral Forge Vault, Biome Encyclopedia, Boss Rush Colosseum, Wiring Masterclass, Starter Academy) |
+| Paired characters | 17 (across all original projects) |
+| Total tracked binary files | ~320+ |
 | Git LFS | Active for .wld, .plr, .map, .bak |
 | GitHub | https://github.com/appleweiping/my-terraria (public) |
+| Framework | TerrariaAgentFramework v2.0 (world + character generation) |
+| Game Agent | TerrariaGameAgent (network protocol bot, compiles and runs) |
+| Mod | TerrariaAgentMod (tModLoader, awaiting SDK build) |
 
 ## Project Phase
 

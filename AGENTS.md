@@ -77,3 +77,80 @@ When creating original saves, the bar is high:
 - Push after each coherent batch when network/auth works.
 - Do not remove existing saves unless the user explicitly approves deletion.
 - Preserve binary saves with Git LFS.
+
+## Handoff Protocol
+
+When multiple agents work on this repository (sequentially or in parallel), follow these coordination rules:
+
+### Research → Import → Verify Pipeline
+
+1. **Research agent** produces:
+   - A markdown file in `external-sources/` with candidate list
+   - Each candidate has: name, source URL, author, license, category, quality signals, download link (if public), and import recommendation (public/private/skip)
+   - File naming: `external-sources/YYYY-MM-DD-<source-name>.md`
+
+2. **Import agent** consumes the research file and:
+   - Downloads recommended candidates
+   - Computes SHA-256 hashes
+   - Places files in correct location (imported/ for public, private-imports/ for restricted)
+   - Creates per-import `THIRD_PARTY_NOTICE.md`
+   - Updates `inventory/terraria-file-inventory.csv`
+   - Commits with message format: `Import <category>: <save-name> from <source>`
+
+3. **Verify agent** runs after import and:
+   - Checks all .wld/.plr files are LFS-tracked (`git lfs ls-files`)
+   - Validates SHA-256 hashes against provenance records
+   - Confirms file sizes are reasonable (not zero-byte or truncated)
+   - Updates `inventory/expansion-log.md`
+   - Reports any discrepancies
+
+### Original Project Pipeline
+
+1. **Design agent** produces:
+   - `originals/<project-name>/design.md` — concept, thesis, feature list
+   - `originals/<project-name>/acceptance-checklist.md` — measurable completion criteria
+
+2. **Build agent** executes:
+   - Generates or modifies .wld/.plr files using available tooling
+   - Records build steps and intermediate hashes
+   - Commits working state with message: `WIP: <project-name> — <description>`
+
+3. **QA agent** validates:
+   - Reads back the .wld file to verify title, spawn, chest count, sign count
+   - Checks acceptance-checklist.md items
+   - Commits final state with message: `Complete <project-name> v<version>`
+
+### Handoff Document Format
+
+When an agent cannot complete its work in one session, it must leave a handoff note:
+
+```
+File: .work/handoff/<YYYY-MM-DD>-<task>.md
+
+# Handoff: <task description>
+
+## Completed
+- [x] item 1
+- [x] item 2
+
+## Remaining
+- [ ] item 3
+- [ ] item 4
+
+## Blockers
+- description of any blockers
+
+## Context
+- key decisions made
+- files modified
+- next agent should start by...
+```
+
+### Conflict Avoidance
+
+- Agents working in parallel must claim non-overlapping directories
+- Research agents: only write to external-sources/
+- Import agents: only write to Terraria_saves/imported/ and inventory/
+- Original project agents: only write to originals/<their-project>/
+- Documentation agents: only write to docs/ and root markdown files
+- Never modify another agent's in-progress work without explicit coordination

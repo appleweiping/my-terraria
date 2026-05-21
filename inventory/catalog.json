@@ -1,0 +1,229 @@
+{
+  "catalog_version": "2.1.0",
+  "generated_by": "tools/build_catalog.py",
+  "source_metadata_generated": "2026-05-18T21:42:34.4330093Z",
+  "summary": {
+    "save_files_total": 220,
+    "primary_worlds": 53,
+    "primary_players": 71,
+    "public_import_worlds": 4,
+    "original_project_files": 23,
+    "map_cache_files": 48,
+    "backup_files": 48,
+    "inventory_rows": 193,
+    "metadata_worlds": 49
+  },
+  "roles": {
+    "original_project": 23,
+    "personal_player": 73,
+    "personal_world": 72,
+    "player_map_cache": 48,
+    "public_import": 4
+  },
+  "extensions": {
+    ".bak": 48,
+    ".map": 48,
+    ".plr": 71,
+    ".wld": 53
+  },
+  "version_matrix": [
+    {
+      "terraria_version": "1.3.0.7",
+      "metadata_worlds": 1,
+      "difficulties": {
+        "classic": 1
+      },
+      "total_chests": 333
+    },
+    {
+      "terraria_version": "1.3.0.8",
+      "metadata_worlds": 2,
+      "difficulties": {
+        "classic": 2
+      },
+      "total_chests": 614
+    },
+    {
+      "terraria_version": "1.3.5.3",
+      "metadata_worlds": 1,
+      "difficulties": {
+        "expert": 1
+      },
+      "total_chests": 271
+    },
+    {
+      "terraria_version": "1.4.0.5",
+      "metadata_worlds": 6,
+      "difficulties": {
+        "classic": 4,
+        "expert": 2
+      },
+      "total_chests": 2460
+    },
+    {
+      "terraria_version": "1.4.3.2",
+      "metadata_worlds": 3,
+      "difficulties": {
+        "classic": 2,
+        "expert": 1
+      },
+      "total_chests": 1884
+    },
+    {
+      "terraria_version": "1.4.3.6",
+      "metadata_worlds": 1,
+      "difficulties": {
+        "expert": 1
+      },
+      "total_chests": 848
+    },
+    {
+      "terraria_version": "1.4.4",
+      "metadata_worlds": 3,
+      "difficulties": {
+        "classic": 1,
+        "expert": 1,
+        "journey": 1
+      },
+      "total_chests": 2322
+    },
+    {
+      "terraria_version": "1.4.4.7",
+      "metadata_worlds": 2,
+      "difficulties": {
+        "classic": 1,
+        "master": 1
+      },
+      "total_chests": 2004
+    },
+    {
+      "terraria_version": "1.4.4.9",
+      "metadata_worlds": 29,
+      "difficulties": {
+        "classic": 10,
+        "expert": 10,
+        "journey": 2,
+        "master": 7
+      },
+      "total_chests": 12649
+    },
+    {
+      "terraria_version": "1.4.5.5",
+      "metadata_worlds": 1,
+      "difficulties": {
+        "master": 1
+      },
+      "total_chests": 1325
+    }
+  ],
+  "original_projects": [
+    {
+      "slug": "astral-forge-vault",
+      "title": "Astral Forge Vault",
+      "status": "See README",
+      "files": 7,
+      "worlds": 1,
+      "players": 5,
+      "has_design": true,
+      "has_acceptance_checklist": true,
+      "readme": "originals/astral-forge-vault/README.md"
+    },
+    {
+      "slug": "biome-encyclopedia",
+      "title": "Biome Encyclopedia",
+      "status": "See README",
+      "files": 3,
+      "worlds": 1,
+      "players": 2,
+      "has_design": true,
+      "has_acceptance_checklist": true,
+      "readme": "originals/biome-encyclopedia/README.md"
+    },
+    {
+      "slug": "boss-rush-colosseum",
+      "title": "Boss Rush Colosseum",
+      "status": "Design document=Complete; Acceptance checklist=Complete; World construction=Not started; Character creation=Not started; Testing/QA=Not started",
+      "files": 6,
+      "worlds": 1,
+      "players": 5,
+      "has_design": true,
+      "has_acceptance_checklist": true,
+      "readme": "originals/boss-rush-colosseum/README.md"
+    },
+    {
+      "slug": "starter-academy",
+      "title": "Starter Academy",
+      "status": "World file=Present; Paired characters=Present; Design document=Reconstructed; Acceptance checklist=Reconstructed; QA readback=Pending; In-game walkthrough=Pending",
+      "files": 4,
+      "worlds": 1,
+      "players": 3,
+      "has_design": true,
+      "has_acceptance_checklist": true,
+      "readme": "originals/starter-academy/README.md"
+    },
+    {
+      "slug": "wiring-masterclass",
+      "title": "Wiring Masterclass",
+      "status": "Design document=Complete; Acceptance checklist=Complete; World construction=Not started; Character creation=Not started; Testing/QA=Not started",
+      "files": 3,
+      "worlds": 1,
+      "players": 2,
+      "has_design": true,
+      "has_acceptance_checklist": true,
+      "readme": "originals/wiring-masterclass/README.md"
+    }
+  ],
+  "public_imports": [
+    {
+      "slug": "all-boss-battle-arenas",
+      "worlds": 1,
+      "has_third_party_notice": true,
+      "notice": "Terraria_saves/imported/all-boss-battle-arenas/THIRD_PARTY_NOTICE.md"
+    },
+    {
+      "slug": "compact-all-items-hub-master",
+      "worlds": 1,
+      "has_third_party_notice": true,
+      "notice": "Terraria_saves/imported/compact-all-items-hub-master/THIRD_PARTY_NOTICE.md"
+    },
+    {
+      "slug": "story-of-red-cloud",
+      "worlds": 1,
+      "has_third_party_notice": true,
+      "notice": "Terraria_saves/imported/story-of-red-cloud/THIRD_PARTY_NOTICE.md"
+    },
+    {
+      "slug": "story-of-red-cloud-xelvaa-remix",
+      "worlds": 1,
+      "has_third_party_notice": true,
+      "notice": "Terraria_saves/imported/story-of-red-cloud-xelvaa-remix/THIRD_PARTY_NOTICE.md"
+    }
+  ],
+  "metadata_coverage": {
+    "personal_worlds_with_metadata": 44,
+    "personal_worlds_missing_metadata": 0,
+    "missing_metadata_sample": []
+  },
+  "quality_gates": [
+    {
+      "name": "catalog-version",
+      "status": "pass",
+      "detail": "catalog_version=2.1.0"
+    },
+    {
+      "name": "public-import-notices",
+      "status": "pass",
+      "detail": "every public import directory has THIRD_PARTY_NOTICE.md"
+    },
+    {
+      "name": "original-project-docs",
+      "status": "pass",
+      "detail": "every original project has README, design, and acceptance checklist"
+    },
+    {
+      "name": "deterministic-generation",
+      "status": "pass",
+      "detail": "tools/build_catalog.py --check compares generated outputs"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # Project Context
 
-## Current State (as of 2026-05-19)
+## Current State (as of 2026-05-21)
 
 | Metric | Value |
 |--------|-------|
@@ -13,7 +13,7 @@
 | Total tracked binary files | ~320+ |
 | Git LFS | Active for .wld, .plr, .map, .bak |
 | GitHub | https://github.com/appleweiping/my-terraria (public) |
-| Framework | TerrariaAgentFramework v2.0 (world + character generation) |
+| Framework | TerrariaAgentFramework v2.1 (world/character generation + deterministic catalog tooling) |
 | Game Agent | TerrariaGameAgent (network protocol bot, compiles and runs) |
 | Mod | TerrariaAgentMod (tModLoader, awaiting SDK build) |
 
@@ -27,7 +27,7 @@ Phase 1 — Foundation (COMPLETE)
 
 Phase 2 — Breadth (IN PROGRESS)
 - Expand coverage across all content pillars
-- Add automated integrity tooling
+- Add automated integrity tooling: catalog/version-matrix generator now present (`tools/build_catalog.py`)
 - Create second original project
 - Improve documentation to top-tier level
 
@@ -47,6 +47,7 @@ Phase 2 — Breadth (IN PROGRESS)
 - Add CI workflow for LFS integrity checks
 - Extract and document save metadata (version, size, difficulty, NPCs)
 - Create visual documentation (TEdit map renders)
+- Add CI workflow for `python tools/build_catalog.py --check`
 
 ## Domain Language
 

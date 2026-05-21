@@ -1,2 +1,4 @@
 .work/
 private-imports/
+__pycache__/
+*.pyc

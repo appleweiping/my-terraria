@@ -77,3 +77,19 @@
   - SHA-256: `3f6751970eed40c81772fe3f961c640975a32d4207b8d488c0a94b742655aaeb`
   - Note: Requires tsorcRevamp tModLoader mod for intended gameplay experience
   - THIRD_PARTY_NOTICE.md created alongside the file
+
+## 2026-05-21
+
+### TerrariaAgent Framework v2.1 Catalog Automation
+
+- Added dependency-free catalog tooling in `tools/build_catalog.py`.
+- Generated `inventory/catalog.json` for future automation and `inventory/CATALOG.md` for human review.
+- Catalog v2.1 summarizes 220 save files, 53 primary worlds, 71 primary players, 4 public import worlds, 5 original projects, and 49 metadata-extracted worlds.
+- Added a version compatibility matrix grouped by Terraria version, difficulty, and total chest count.
+- Added quality gates for public import notices, original-project docs, deterministic generation, and catalog versioning.
+- Validation command: `python tools/build_catalog.py --check`.
+
+### Starter Academy Documentation Recovery
+
+- Reconstructed `originals/starter-academy/README.md`, `design.md`, and `acceptance-checklist.md` so all original projects now have the required documentation trio.
+- Current status remains QA-pending: the files exist and catalog correctly, but world readback and in-game walkthrough still need a future verification pass.

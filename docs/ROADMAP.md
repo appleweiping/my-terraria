@@ -195,6 +195,8 @@ Automated extraction of structured data from `.wld` and `.plr` files:
 
 ### 4.4 Version Compatibility Matrix
 
+**v2.1 status:** Basic catalog-level matrix is implemented in `inventory/CATALOG.md` and `inventory/catalog.json` via `tools/build_catalog.py`. It aggregates metadata-extracted worlds by Terraria version, difficulty, and total chest count. Next step is per-save load testing.
+
 | Save | Created In | Last Tested | 1.4.4.9 | 1.4.5.x | Notes |
 |------|-----------|-------------|----------|----------|-------|
 | (template row) | v1.4.4.9 | 2025-01 | OK | Untested | — |

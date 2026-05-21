@@ -18,7 +18,7 @@
 
 A structured, version-controlled archive of Terraria save data — personal worlds, players, curated third-party imports, and original flagship builds. Every binary is stored via Git LFS, every import carries full provenance, and every expansion follows documented governance rules.
 
-**72 personal worlds** | **91 personal players** | **4 public imports** | **5 original projects** | **TerrariaAgent Framework v2.0**
+**72 personal worlds** | **91 personal players** | **4 public imports** | **5 original projects** | **TerrariaAgent Framework v2.1**
 
 ---
 
@@ -90,7 +90,7 @@ Full provenance records in `external-sources/`.
 
 ---
 
-## Terraria Agent Framework (v2.0)
+## Terraria Agent Framework (v2.1)
 
 Generate worlds and characters programmatically:
 
@@ -107,7 +107,21 @@ dotnet run -- --spec my-world.json --output ./
 
 Capabilities: programmatic world generation, NPC housing placement, chest inventory population (5450+ items), teleporter wiring, biome painting, character creation with loadouts, SHA-256 integrity verification.
 
-Built on .NET 8 + TEdit core libraries.
+Built on .NET 8 + TEdit core libraries, plus dependency-free catalog tooling for archive QA.
+
+### Catalog and Validation
+
+The v2.1 catalog layer generates a deterministic public inventory summary, original-project matrix, public-import provenance table, version compatibility matrix, and quality gates:
+
+```powershell
+python tools/build_catalog.py
+python tools/build_catalog.py --check
+```
+
+Outputs:
+
+- `inventory/CATALOG.md` — human-readable archive catalog
+- `inventory/catalog.json` — machine-readable catalog for future automation
 
 ---
 

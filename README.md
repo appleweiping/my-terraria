@@ -3,22 +3,42 @@
 </p>
 
 <p align="center">
-  <strong>Source-traceable Terraria save archive with curated imports, original projects, and automated tooling.</strong>
+  <strong>Source-traceable Terraria save archive with curated imports, original projects, and a full programmatic generation engine.</strong>
 </p>
 
 <p align="center">
   <a href="https://github.com/appleweiping/my-terraria/blob/main/LICENSE"><img src="https://img.shields.io/github/license/appleweiping/my-terraria?style=for-the-badge" alt="License" /></a>
   <a href="https://git-lfs.github.com/"><img src="https://img.shields.io/badge/Git%20LFS-enabled-blue?style=for-the-badge&logo=git" alt="Git LFS" /></a>
   <a href="https://store.steampowered.com/app/105600/Terraria/"><img src="https://img.shields.io/badge/Terraria-1.4.x-green?style=for-the-badge&logo=steam" alt="Terraria" /></a>
+  <a href="https://github.com/appleweiping/my-terraria/actions"><img src="https://img.shields.io/github/actions/workflow/status/appleweiping/my-terraria/ci.yml?style=for-the-badge&label=CI" alt="CI" /></a>
 </p>
 
 ---
 
-## Overview
+## What Is This?
 
 A structured, version-controlled archive of Terraria save data — personal worlds, players, curated third-party imports, and original flagship builds. Every binary is stored via Git LFS, every import carries full provenance, and every expansion follows documented governance rules.
 
-**72 personal worlds** | **91 personal players** | **4 public imports** | **5 original projects** | **TerrariaAgent Framework v2.1**
+This is not a download folder. It is an engineered collection with:
+
+- **Programmatic generation** — worlds and characters built from JSON specs via TerrariaAgentFramework
+- **Curatorial standards** — quality tiers, acceptance checklists, and provenance for every import
+- **Automated integrity** — CI checks catalog consistency, LFS pointers, and provenance on every commit
+- **Full documentation** — design docs, build logs, metadata sidecars, and naming conventions
+
+---
+
+## Numbers
+
+| Metric | Count |
+|--------|------:|
+| Personal worlds | 72 |
+| Personal players | 91 |
+| Public imports | 4 |
+| Original projects | 5 |
+| Paired characters | 17 |
+| Tracked binary files | 320+ |
+| Framework version | v2.1 |
 
 ---
 
@@ -38,34 +58,21 @@ A structured, version-controlled archive of Terraria save data — personal worl
 
 ---
 
-## Architecture
+## Original Projects
 
-```
-my-terraria/
-├── Terraria_saves/
-│   ├── Players/              # 91 personal player files
-│   ├── Worlds/               # 72 personal world files
-│   └── imported/             # Public third-party imports (Git LFS)
-├── originals/                # 5 original flagship projects
-│   ├── astral-forge-vault/   # Ultimate storage archive hub
-│   ├── biome-encyclopedia/   # Every biome documented
-│   ├── boss-rush-colosseum/  # Every boss, arena-optimized
-│   ├── starter-academy/      # New player progression guide
-│   └── wiring-masterclass/   # Logic gates & mechanism demos
-├── inventory/                # File inventory, hashes, restore guidance
-├── external-sources/         # Provenance records, import decisions
-├── private-imports/          # .gitignored — license-restricted
-├── docs/                     # Documentation and assets
-├── AGENTS.md                 # Governance for automated contributors
-├── CLAUDE.md                 # Multi-agent collaboration config
-└── CONTEXT.md                # Domain context for agent handoffs
-```
+Five purpose-built worlds that exist nowhere else. Each has a design document, acceptance checklist, and paired characters.
 
----
+| Project | Status | Worlds | Characters | Purpose |
+|---------|--------|-------:|----------:|---------|
+| **Astral Forge Vault** | ✅ Complete | 1 | 5 | Ultimate storage hub — 634 chests, `getfixedboi` seed |
+| **Biome Encyclopedia** | ✅ Complete | 1 | 2 | All 15 biomes documented and artificially constructed |
+| **Boss Rush Colosseum** | 🔨 Building | 1 | 5 | Every boss arena, optimized layouts, full summon chests |
+| **Wiring Masterclass** | 🔨 Building | 1 | 2 | 6-section wiring reference from basics to hoik engines |
+| **Starter Academy** | ⚠️ QA Pending | 1 | 3 | New player progression guide with 3 checkpoint characters |
 
-## Featured: Astral Forge Vault
+### Astral Forge Vault
 
-The repository's original flagship — a purpose-built archive hub world for maximum utility and completeness.
+The repository's flagship — a purpose-built archive hub world for maximum utility and completeness.
 
 | Property | Value |
 |----------|-------|
@@ -79,37 +86,119 @@ The repository's original flagship — a purpose-built archive hub world for max
 
 ## Public Import Collection
 
-| Save | Category | License |
-|------|----------|---------|
-| The Story of Red Cloud | Adventure / RPG | Public Domain |
-| The Story of Red Cloud — Xelvaa Remix | Adventure / Dark Souls | Public Domain |
-| All Boss Battle Arenas Expert | Boss arena / Combat | CC BY-NC 3.0 |
-| SUNV XTRA All Items Hub 1.4.5 Master | Compact all-items | GPL-3.0 |
+| Save | Category | License | Tier |
+|------|----------|---------|------|
+| The Story of Red Cloud | Adventure / RPG | Public Domain | S |
+| The Story of Red Cloud — Xelvaa Remix | Adventure / Dark Souls | Public Domain | S |
+| All Boss Battle Arenas Expert | Boss arena / Combat | CC BY-NC 3.0 | A |
+| SUNV XTRA All Items Hub 1.4.5 Master | Compact all-items | GPL-3.0 | S |
 
-Full provenance records in `external-sources/`.
+Full provenance records in `external-sources/`. Every import has a `THIRD_PARTY_NOTICE.md` and a `.meta.json` sidecar.
 
 ---
 
-## Terraria Agent Framework (v2.1)
+## TerrariaAgentFramework (v2.1)
 
-Generate worlds and characters programmatically:
+A C# CLI and library that generates Terraria worlds and characters from JSON specifications. Designed for AI agents to create game content programmatically.
+
+### Capabilities
+
+| Module | What It Does |
+|--------|-------------|
+| `WorldBuilder` | Load/create worlds, set title/size/difficulty/spawn |
+| `PlayerBuilder` | Create characters with full loadouts, god mode, prefixes |
+| `BiomeFactory` | 15 biome section generators with correct block thresholds |
+| `StructureFactory` | Arenas, storage vaults, NPC housing, farms, crafting hubs |
+| `ArchitectureFactory` | Castle, sky palace, pagoda, treehouse, dome, pyramid, colosseum, etc. |
+| `TerrainFactory` | Mountains, lakes, caves, floating islands, waterfalls, lava rivers, crystal caverns |
+| `ItemLookup` | Fuzzy name-to-ID resolution for all tiles, walls, and items |
+
+### Quick Start
 
 ```powershell
-dotnet run -- --spec my-world.json --output ./
+$dotnet = "D:\Terraria_doc\.work\dotnet\dotnet.exe"
+$proj   = "D:\Terraria_doc\.work\TerrariaAgentFramework\TerrariaAgentFramework.csproj"
 
-# [*] Loading base world template...
-# [*] Placing 15 biome sections...
-# [*] Building castle at (1000, 400)...
-# [*] Creating teleporter network...
-# [*] Generating 5 paired characters...
-# [*] Done. Output: My_Epic_World.wld (11.3 MB)
+# Generate a world from spec
+& $dotnet run --project $proj -- --spec Specs/boss-rush-colosseum.json --output D:\output\
+
+# Create a god-mode melee character
+& $dotnet run --project $proj -- --player "Solar Warden" --class melee --god --output player.plr
 ```
 
-Capabilities: programmatic world generation, NPC housing placement, chest inventory population (5450+ items), teleporter wiring, biome painting, character creation with loadouts, SHA-256 integrity verification.
+### JSON Spec Example
 
-Built on .NET 8 + TEdit core libraries, plus dependency-free catalog tooling for archive QA.
+```json
+{
+  "title": "Boss Rush Colosseum",
+  "size": "Large",
+  "difficulty": "Master",
+  "hub": { "type": "celestial" },
+  "structures": [
+    { "type": "boss_arena", "x": 1000, "y": 500, "params": { "tiers": "8" } },
+    { "type": "storage_vault", "x": 4200, "y": 300, "params": { "chests": "30" } }
+  ],
+  "architecture": [
+    { "type": "colosseum", "x": 5000, "y": 500 }
+  ],
+  "teleporterNetwork": true,
+  "players": [
+    {
+      "name": "Melee Champion",
+      "maxStats": true,
+      "godMode": true,
+      "armor": ["Solar Flare Helmet", "Solar Flare Breastplate", "Solar Flare Leggings"],
+      "weapons": ["Zenith", "Solar Eruption", "Daybreak"],
+      "items": [{ "name": "Celestial Sigil", "stack": 99 }]
+    }
+  ]
+}
+```
 
-### Catalog and Validation
+See [`docs/agent-framework-api.md`](docs/agent-framework-api.md) for the complete API reference.
+
+---
+
+## Repository Structure
+
+```
+my-terraria/
+├── .github/workflows/ci.yml     # CI: catalog check, LFS validation, provenance
+├── Terraria_saves/
+│   ├── Players/                 # 91 personal player files (.plr via Git LFS)
+│   ├── Worlds/                  # 72 personal world files (.wld via Git LFS)
+│   └── imported/                # 4 public third-party imports with provenance
+│       ├── story-of-red-cloud/
+│       ├── story-of-red-cloud-xelvaa-remix/
+│       ├── all-boss-battle-arenas/
+│       └── compact-all-items-hub-master/
+├── originals/                   # 5 original flagship projects
+│   ├── astral-forge-vault/      # ✅ Complete — ultimate storage hub
+│   ├── biome-encyclopedia/      # ✅ Complete — all 15 biomes documented
+│   ├── boss-rush-colosseum/     # 🔨 Building — every boss arena
+│   ├── starter-academy/         # ⚠️ QA — new player progression guide
+│   └── wiring-masterclass/      # 🔨 Building — wiring reference
+├── inventory/
+│   ├── CATALOG.md               # Human-readable archive catalog (auto-generated)
+│   └── catalog.json             # Machine-readable catalog
+├── external-sources/            # Provenance records and import research logs
+├── docs/
+│   ├── ROADMAP.md               # Expansion roadmap with phase tracking
+│   ├── agent-framework-api.md   # TerrariaAgentFramework complete API reference
+│   ├── naming-conventions.md    # File and directory naming rules
+│   └── metadata-spec.md         # .meta.json sidecar schema
+├── tools/
+│   └── build_catalog.py         # Catalog generator (dependency-free Python)
+├── tests/
+│   └── test_build_catalog.py    # Unit tests for catalog tooling
+├── AGENTS.md                    # Governance for automated contributors
+├── CLAUDE.md                    # Multi-agent collaboration config
+└── CONTEXT.md                   # Domain context for agent handoffs
+```
+
+---
+
+## Catalog and Validation
 
 The v2.1 catalog layer generates a deterministic public inventory summary, original-project matrix, public-import provenance table, version compatibility matrix, and quality gates:
 
@@ -123,6 +212,8 @@ Outputs:
 - `inventory/CATALOG.md` — human-readable archive catalog
 - `inventory/catalog.json` — machine-readable catalog for future automation
 
+CI runs `--check` on every push to verify catalog consistency.
+
 ---
 
 ## Quick Start
@@ -134,12 +225,30 @@ git clone https://github.com/appleweiping/my-terraria.git
 cd my-terraria
 git lfs pull
 
-# Restore to Terraria
+# Restore worlds to Terraria
 Copy-Item "Terraria_saves\Worlds\*.wld" `
     -Destination "$env:USERPROFILE\Documents\My Games\Terraria\Worlds" -Force
+
+# Restore players to Terraria
 Copy-Item "Terraria_saves\Players\*.plr" `
     -Destination "$env:USERPROFILE\Documents\My Games\Terraria\Players" -Force
+
+# Run catalog check
+python tools/build_catalog.py --check
 ```
+
+---
+
+## Documentation
+
+| Document | Description |
+|----------|-------------|
+| [`docs/ROADMAP.md`](docs/ROADMAP.md) | Expansion roadmap — content pillars, quality tiers, phase tracking |
+| [`docs/agent-framework-api.md`](docs/agent-framework-api.md) | TerrariaAgentFramework complete API reference |
+| [`docs/naming-conventions.md`](docs/naming-conventions.md) | Canonical naming rules for files and directories |
+| [`docs/metadata-spec.md`](docs/metadata-spec.md) | `.meta.json` sidecar schema with examples |
+| [`AGENTS.md`](AGENTS.md) | Governance rules for automated contributors |
+| [`CONTEXT.md`](CONTEXT.md) | Domain context and current project state |
 
 ---
 
@@ -152,15 +261,10 @@ Contributions must follow the expansion protocol in [`AGENTS.md`](AGENTS.md):
 3. Use Git LFS for all binary save files
 4. Record full provenance (source URL, author, SHA-256, license)
 5. Respect licensing — only redistribution-compatible saves go public
-
----
-
-## Roadmap
-
-See [`docs/ROADMAP.md`](docs/ROADMAP.md) for planned milestones.
+6. Add a `.meta.json` sidecar for every new save (see [`docs/metadata-spec.md`](docs/metadata-spec.md))
 
 ---
 
 ## License
 
-Original content licensed under [`LICENSE`](LICENSE). Third-party saves retain their original licenses — see [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
+Original content licensed under [`LICENSE`](LICENSE). Third-party saves retain their original licenses — see [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) and per-import `THIRD_PARTY_NOTICE.md` files.

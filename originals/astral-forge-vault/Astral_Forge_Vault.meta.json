@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "save_type": "world",
+  "terraria_version": "1.4.4.9",
+  "sha256": "original-project",
+  "archived_date": "2026-05-15",
+  "tier": "original",
+  "description": "Ultimate storage archive hub — 634 chests, 46 signs, 5 paired characters, getfixedboi seed base",
+  "world": {
+    "name": "Astral Forge Vault",
+    "size": "large",
+    "difficulty": "master",
+    "seed": "getfixedboi",
+    "hardmode": true,
+    "post_moonlord": true,
+    "chest_count": 634,
+    "sign_count": 46,
+    "npc_count": 22,
+    "notes": "Flagship original project. Generated with TerrariaAgentFramework v2.1."
+  },
+  "compatibility": {
+    "1.4.4.9": "ok"
+  }
+}

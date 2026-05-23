@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "save_type": "world",
+  "terraria_version": "1.4.4.9",
+  "sha256": "original-project",
+  "archived_date": "2026-05-18",
+  "tier": "original",
+  "description": "Arena-optimized world for every boss — 5 paired characters, teleporter network, full summon chests",
+  "world": {
+    "name": "Boss Rush Colosseum",
+    "size": "large",
+    "difficulty": "master",
+    "hardmode": true,
+    "post_moonlord": true,
+    "notes": "World file present. Construction status: design complete, in-game build pending. Spec: Specs/boss-rush-colosseum.json"
+  },
+  "compatibility": {
+    "1.4.4.9": "untested"
+  }
+}

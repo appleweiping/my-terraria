@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "save_type": "world",
+  "terraria_version": "1.4.5.5",
+  "sha256": "see-THIRD_PARTY_NOTICE.md",
+  "archived_date": "2026-05-15",
+  "tier": "S",
+  "description": "Compact all-items hub in Master mode — every item accessible, organized by category",
+  "world": {
+    "name": "SUNV XTRA All Items Hub 1.4.5 Master",
+    "size": "medium",
+    "difficulty": "master",
+    "hardmode": true,
+    "post_moonlord": true,
+    "notes": "Vanilla 1.4.5.5. All 5450+ items organized in labeled chests."
+  },
+  "compatibility": {
+    "1.4.5.5": "ok",
+    "1.4.4.9": "untested"
+  },
+  "source": {
+    "url": "see THIRD_PARTY_NOTICE.md",
+    "author": "SUNV",
+    "license": "GPL-3.0",
+    "retrieved_date": "2026-05-15"
+  }
+}

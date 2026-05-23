@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "save_type": "world",
+  "terraria_version": "1.4.4.9",
+  "sha256": "see-THIRD_PARTY_NOTICE.md",
+  "archived_date": "2026-05-15",
+  "tier": "S",
+  "description": "Dark Souls-inspired remix of The Story of Red Cloud — harder difficulty, remixed encounters",
+  "world": {
+    "name": "The Story of Red Cloud — Xelvaa Remix",
+    "size": "large",
+    "difficulty": "expert",
+    "hardmode": true,
+    "post_moonlord": false,
+    "notes": "Requires tsorcRevamp tModLoader mod. Remix by Xelvaa."
+  },
+  "compatibility": {
+    "1.4.4.9": "ok",
+    "1.4.5.x": "untested"
+  },
+  "source": {
+    "url": "https://github.com/timhjersted/tsorcDownload",
+    "author": "Xelvaa (remix) / Tim Hjersted (original)",
+    "license": "Public Domain",
+    "retrieved_date": "2026-05-15"
+  }
+}

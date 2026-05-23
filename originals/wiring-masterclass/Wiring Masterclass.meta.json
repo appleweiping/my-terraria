@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "save_type": "world",
+  "terraria_version": "1.4.4.9",
+  "sha256": "original-project",
+  "archived_date": "2026-05-18",
+  "tier": "original",
+  "description": "Complete wiring reference — 6 sections covering basic wiring through hoik engines and automated systems",
+  "world": {
+    "name": "Wiring Masterclass",
+    "size": "large",
+    "difficulty": "journey",
+    "hardmode": false,
+    "post_moonlord": false,
+    "notes": "World file present. Construction status: design complete, in-game build pending. Spec: Specs/wiring-masterclass.json"
+  },
+  "compatibility": {
+    "1.4.4.9": "untested"
+  }
+}

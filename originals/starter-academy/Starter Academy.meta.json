@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "save_type": "world",
+  "terraria_version": "1.4.4.9",
+  "sha256": "original-project",
+  "archived_date": "2026-05-18",
+  "tier": "original",
+  "description": "New player progression guide — 3 paired characters at different stages, NPC town, herb farm",
+  "world": {
+    "name": "Starter Academy",
+    "size": "large",
+    "difficulty": "classic",
+    "hardmode": false,
+    "post_moonlord": false,
+    "notes": "World file present. QA readback and in-game walkthrough pending. Spec: Specs/starter-academy.json"
+  },
+  "compatibility": {
+    "1.4.4.9": "ok"
+  }
+}

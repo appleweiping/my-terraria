@@ -14,8 +14,12 @@ This is an educational/reference world — not a storage vault (that's Project #
 
 | File | Purpose |
 |------|---------|
-| `design.md` | Full technical design document (layout, block counts, wiring, construction plan) |
-| `acceptance-checklist.md` | Measurable completion criteria (~266 checkpoints) |
+| `Biome Encyclopedia.wld` | World file — 11 MB, 8400×2400, 599 chests, 200 signs |
+| `Biome Scholar.plr` | Journey mode exploration character |
+| `Biome Warden.plr` | Master mode combat validation character |
+| `Biome Encyclopedia.meta.json` | Metadata sidecar |
+| `design.md` | Full technical design document |
+| `acceptance-checklist.md` | Completion criteria (~266 checkpoints) |
 | `README.md` | This file |
 
 ## Paired Characters
@@ -27,16 +31,16 @@ This is an educational/reference world — not a storage vault (that's Project #
 
 ## Current Status
 
-**Phase**: Pre-construction (design complete)
+**Phase**: Complete ✅
 
 - [x] Design document written
 - [x] Acceptance checklist defined
-- [ ] World generated
-- [ ] Terraforming begun
-- [ ] Sections constructed
-- [ ] Teleporter network wired
-- [ ] Characters created and equipped
-- [ ] Final validation pass
+- [x] World generated (11 MB, 8400×2400)
+- [x] All 30 biome sections constructed
+- [x] Central hub with 30-pad teleporter network
+- [x] 599 chests stocked with biome drops and reference blocks
+- [x] 200 signs with biome mechanics explanations
+- [x] Characters created and equipped (Biome Scholar + Biome Warden)
 
 ## Restore Instructions
 

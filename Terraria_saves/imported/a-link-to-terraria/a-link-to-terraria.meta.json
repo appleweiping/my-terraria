@@ -1,0 +1,27 @@
+﻿{
+  "schema_version": "1.0",
+  "save_type": "world",
+  "terraria_version": "1.4.4.9",
+  "sha256": "pending-download",
+  "archived_date": "2026-05-24",
+  "tier": "S",
+  "description": "Zelda recreation inside Terraria — 9 dungeons, 4-player co-op, Zelda-universe NPCs, puzzles, parkour, boss arenas. 288K downloads.",
+  "world": {
+    "name": "A Link to Terraria",
+    "size": "large",
+    "difficulty": "classic",
+    "hardmode": false,
+    "post_moonlord": false,
+    "notes": "Vanilla 1.4.4.9, no mods required. Version 4.0.5. AGPLv3 license. CurseForge CDN blocks automated download — manual download from https://www.curseforge.com/terraria/maps/a-link-to-terraria/download/4145198"
+  },
+  "compatibility": {
+    "1.4.4.9": "ok",
+    "1.4.5.x": "untested"
+  },
+  "source": {
+    "url": "https://www.curseforge.com/terraria/maps/a-link-to-terraria",
+    "author": "Andi27",
+    "license": "AGPLv3",
+    "retrieved_date": "2026-05-24"
+  }
+}

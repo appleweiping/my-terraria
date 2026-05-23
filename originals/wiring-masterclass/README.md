@@ -17,16 +17,20 @@ A comprehensive educational Terraria world that teaches the complete wiring and 
 
 | Phase | Status |
 |-------|--------|
-| Design document | Complete |
-| Acceptance checklist | Complete |
-| World construction | Not started |
-| Character creation | Not started |
-| Testing/QA | Not started |
+| Design document | ✅ Complete |
+| Acceptance checklist | ✅ Complete (80/80) |
+| World construction | ✅ Complete |
+| Character creation | ✅ Complete (2 characters) |
+| Testing/QA | ✅ Complete |
 
 ## File Structure
 
 ```
 originals/wiring-masterclass/
+  Wiring Masterclass.wld    — World file (Git LFS)
+  Wiring Masterclass.meta.json — Metadata sidecar
+  Wire Wizard.plr           — Paired character (Git LFS)
+  Trap Master.plr           — Paired character (Git LFS)
   design.md                 — Full design specification
   acceptance-checklist.md   — 80-point verification checklist
   README.md                 — This file

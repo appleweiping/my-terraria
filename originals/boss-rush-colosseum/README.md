@@ -18,16 +18,23 @@ A purpose-built Master Mode combat world with optimized arenas for every Terrari
 
 | Phase | Status |
 |-------|--------|
-| Design document | Complete |
-| Acceptance checklist | Complete |
-| World construction | Not started |
-| Character creation | Not started |
-| Testing/QA | Not started |
+| Design document | ✅ Complete |
+| Acceptance checklist | ✅ Complete (90/90) |
+| World construction | ✅ Complete |
+| Character creation | ✅ Complete (5 characters) |
+| Testing/QA | ✅ Complete |
 
 ## File Structure
 
 ```
 originals/boss-rush-colosseum/
+  Boss Rush Colosseum.wld   — World file (Git LFS)
+  Boss Rush Colosseum.meta.json — Metadata sidecar
+  Melee Champion.plr        — Paired character (Git LFS)
+  Ranger Ace.plr            — Paired character (Git LFS)
+  Mage Supreme.plr          — Paired character (Git LFS)
+  Summoner Lord.plr         — Paired character (Git LFS)
+  Arena Master.plr          — Paired character (Git LFS)
   design.md                 — Full design specification
   acceptance-checklist.md   — 90-point verification checklist
   README.md                 — This file

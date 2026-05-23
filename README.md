@@ -32,12 +32,12 @@ This is not a download folder. It is an engineered collection with:
 
 | Metric | Count |
 |--------|------:|
-| Personal worlds | 72 |
-| Personal players | 91 |
-| Public imports | 4 |
+| Personal worlds | 44 |
+| Personal players | 54 |
+| Public imports | 5 |
 | Original projects | 5 |
 | Paired characters | 17 |
-| Tracked binary files | 320+ |
+| Tracked binary files | 330+ |
 | Framework version | v2.1 |
 
 ---
@@ -65,10 +65,10 @@ Five purpose-built worlds that exist nowhere else. Each has a design document, a
 | Project | Status | Worlds | Characters | Purpose |
 |---------|--------|-------:|----------:|---------|
 | **Astral Forge Vault** | ✅ Complete | 1 | 5 | Ultimate storage hub — 634 chests, `getfixedboi` seed |
-| **Biome Encyclopedia** | ✅ Complete | 1 | 2 | All 15 biomes documented and artificially constructed |
-| **Boss Rush Colosseum** | 🔨 Building | 1 | 5 | Every boss arena, optimized layouts, full summon chests |
-| **Wiring Masterclass** | 🔨 Building | 1 | 2 | 6-section wiring reference from basics to hoik engines |
-| **Starter Academy** | ⚠️ QA Pending | 1 | 3 | New player progression guide with 3 checkpoint characters |
+| **Biome Encyclopedia** | ✅ Complete | 1 | 2 | All 30 biomes — hub, teleporter network, 599 chests, 200 signs |
+| **Boss Rush Colosseum** | ✅ Complete | 1 | 5 | Every boss arena, optimized layouts, full summon chests |
+| **Wiring Masterclass** | ✅ Complete | 1 | 2 | 6-section wiring reference from basics to hoik engines |
+| **Starter Academy** | ✅ Complete | 1 | 3 | New player progression guide with 3 checkpoint characters |
 
 ### Astral Forge Vault
 
@@ -92,6 +92,7 @@ The repository's flagship — a purpose-built archive hub world for maximum util
 | The Story of Red Cloud — Xelvaa Remix | Adventure / Dark Souls | Public Domain | S |
 | All Boss Battle Arenas Expert | Boss arena / Combat | CC BY-NC 3.0 | A |
 | SUNV XTRA All Items Hub 1.4.5 Master | Compact all-items | GPL-3.0 | S |
+| A Link to Terraria | Adventure / Zelda recreation | AGPLv3 | S |
 
 Full provenance records in `external-sources/`. Every import has a `THIRD_PARTY_NOTICE.md` and a `.meta.json` sidecar.
 
@@ -112,6 +113,16 @@ A C# CLI and library that generates Terraria worlds and characters from JSON spe
 | `ArchitectureFactory` | Castle, sky palace, pagoda, treehouse, dome, pyramid, colosseum, etc. |
 | `TerrainFactory` | Mountains, lakes, caves, floating islands, waterfalls, lava rivers, crystal caverns |
 | `ItemLookup` | Fuzzy name-to-ID resolution for all tiles, walls, and items |
+| `AstralForgeBuilder` | Specialized builder for the Astral Forge Vault flagship world |
+| `BiomeEncyclopediaBuilder` | Specialized builder for the Biome Encyclopedia — all 30 biomes |
+| `WorldMetadataExtractor` | Extracts metadata (name, size, difficulty, chest count, SHA-256) from .wld files |
+
+### Agent Modules
+
+| Module | What It Does |
+|--------|-------------|
+| `TerrariaGameAgent` | Connects to Terraria server via protocol, controls player with A* pathfinding |
+| `TerrariaAgentMod` | tModLoader mod exposing TCP command server — 12 commands, 8 building patterns |
 
 ### Quick Start
 
@@ -165,19 +176,20 @@ See [`docs/agent-framework-api.md`](docs/agent-framework-api.md) for the complet
 my-terraria/
 ├── .github/workflows/ci.yml     # CI: catalog check, LFS validation, provenance
 ├── Terraria_saves/
-│   ├── Players/                 # 91 personal player files (.plr via Git LFS)
-│   ├── Worlds/                  # 72 personal world files (.wld via Git LFS)
-│   └── imported/                # 4 public third-party imports with provenance
+│   ├── Players/                 # 54 personal player files (.plr via Git LFS)
+│   ├── Worlds/                  # 44 personal world files (.wld via Git LFS)
+│   └── imported/                # 5 public third-party imports with provenance
 │       ├── story-of-red-cloud/
 │       ├── story-of-red-cloud-xelvaa-remix/
 │       ├── all-boss-battle-arenas/
-│       └── compact-all-items-hub-master/
+│       ├── compact-all-items-hub-master/
+│       └── a-link-to-terraria/  # AGPLv3 — .wld pending manual download
 ├── originals/                   # 5 original flagship projects
 │   ├── astral-forge-vault/      # ✅ Complete — ultimate storage hub
-│   ├── biome-encyclopedia/      # ✅ Complete — all 15 biomes documented
-│   ├── boss-rush-colosseum/     # 🔨 Building — every boss arena
-│   ├── starter-academy/         # ⚠️ QA — new player progression guide
-│   └── wiring-masterclass/      # 🔨 Building — wiring reference
+│   ├── biome-encyclopedia/      # ✅ Complete — all 30 biomes, 599 chests, 200 signs
+│   ├── boss-rush-colosseum/     # ✅ Complete — every boss arena
+│   ├── starter-academy/         # ✅ Complete — new player progression guide
+│   └── wiring-masterclass/      # ✅ Complete — wiring reference
 ├── inventory/
 │   ├── CATALOG.md               # Human-readable archive catalog (auto-generated)
 │   └── catalog.json             # Machine-readable catalog

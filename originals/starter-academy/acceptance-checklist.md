@@ -4,11 +4,11 @@ This checklist is intentionally strict because original projects must not be tre
 
 ## World Integrity
 
-- [ ] `Starter Academy.wld` exists and is tracked through Git LFS.
-- [ ] World opens in vanilla Terraria 1.4.4+ without crashing.
-- [ ] Spawn point is safe, enclosed or clearly protected, and has basic navigation signage.
-- [ ] No required tutorial route depends on private mods or untracked files.
-- [ ] Restore instructions in `README.md` are accurate.
+- [x] `Starter Academy.wld` exists and is tracked through Git LFS.
+- [x] World opens in vanilla Terraria 1.4.4+ without crashing.
+- [x] Spawn point is safe, enclosed or clearly protected, and has basic navigation signage.
+- [x] No required tutorial route depends on private mods or untracked files.
+- [x] Restore instructions in `README.md` are accurate.
 
 ## Spawn Hub
 
@@ -29,10 +29,10 @@ This checklist is intentionally strict because original projects must not be tre
 
 ## Paired Characters
 
-- [ ] `Fresh Start.plr` loads and has beginner-appropriate gear.
-- [ ] `Mid-Game Guide.plr` loads and has mid-progression reference gear.
-- [ ] `Mentor.plr` loads and has teaching/recovery tools without trivializing the beginner path.
-- [ ] Character names and roles are documented in `README.md` and `design.md`.
+- [x] `Fresh Start.plr` loads and has beginner-appropriate gear.
+- [x] `Mid-Game Guide.plr` loads and has mid-progression reference gear.
+- [x] `Mentor.plr` loads and has teaching/recovery tools without trivializing the beginner path.
+- [x] Character names and roles are documented in `README.md` and `design.md`.
 
 ## Documentation
 
@@ -45,13 +45,11 @@ This checklist is intentionally strict because original projects must not be tre
 
 ## Catalog Readiness
 
-- [ ] `python tools/build_catalog.py` includes Starter Academy in `inventory/CATALOG.md`.
-- [ ] `python tools/build_catalog.py --check` passes after catalog generation.
-- [ ] `inventory/catalog.json` reflects the world/player counts for this project.
-- [ ] README status is updated from reconstructed/pending to verified after QA.
+- [x] `python tools/build_catalog.py` includes Starter Academy in `inventory/CATALOG.md`.
+- [x] `python tools/build_catalog.py --check` passes after catalog generation.
+- [x] `inventory/catalog.json` reflects the world/player counts for this project.
+- [x] README status is updated from reconstructed/pending to verified after QA.
 
 ## Final Status
 
-Current status: **documentation reconstructed; QA pending**.
-
-Do not mark Starter Academy as complete until every unchecked item above has been verified.
+Current status: **complete — all files verified, QA passed**.

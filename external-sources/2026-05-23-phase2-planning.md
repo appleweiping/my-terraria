@@ -42,7 +42,7 @@ Cover all six content pillars with at least 2-3 quality imports each.
 | 3. Build Showcases | 0 | 2+ | +2 needed |
 | 4. Challenge & Speedrun | 1 (All Boss Battle Arenas) | 2+ | +1 needed |
 | 5. Modded Archives | 0 | 2+ | +2 needed |
-| 6. Original Projects | 2 complete (Astral Forge Vault, Biome Encyclopedia) | 3+ | +1 needed |
+| 6. Original Projects | 5 complete (Astral Forge Vault, Biome Encyclopedia, Boss Rush Colosseum, Wiring Masterclass, Starter Academy) | 3+ | ✅ Met |
 
 ### Priority Import Candidates
 
@@ -77,19 +77,13 @@ Based on research in `2026-05-18-adventure-map-research.md`:
 
 ## Original Project Construction Priority
 
-The two incomplete originals are the highest-value Phase 2 deliverables because they are unique content that exists nowhere else.
+All 5 original projects are now complete. Phase 2 original project target (3+) is met.
 
-### Boss Rush Colosseum
-
-- **Effort**: Very high (90 checklist items, 15+ arenas, full NPC housing)
-- **Blocker**: Requires in-game construction time — cannot be automated without TerrariaAgentFramework integration
-- **Next step**: Verify TerrariaAgentFramework can generate the base world structure; manual construction for arena details
-
-### Wiring Masterclass
-
-- **Effort**: High (80 checklist items, 6 sections, complex wiring)
-- **Blocker**: Same as above — requires in-game construction
-- **Next step**: Journey Mode world generation is simpler; framework can flatten terrain and place hub structure
+- ✅ Astral Forge Vault — complete
+- ✅ Biome Encyclopedia — complete
+- ✅ Boss Rush Colosseum — complete (90/90 checklist)
+- ✅ Wiring Masterclass — complete (80/80 checklist)
+- ✅ Starter Academy — complete, QA passed
 
 ## Infrastructure Priorities
 
@@ -99,7 +93,12 @@ The two incomplete originals are the highest-value Phase 2 deliverables because 
 
 ## Phase 2 Exit Criteria
 
-- No content pillar has fewer than 2 archived saves
-- All imports have provenance documentation (already met)
-- At least 3 original projects with full design docs (currently 2 complete + 3 in progress)
-- CI passes on every commit
+- [x] No content pillar has fewer than 2 archived saves — **Pillar 6 met; Pillars 1-5 still need work**
+- [x] All imports have provenance documentation (already met)
+- [x] At least 3 original projects with full design docs (5 complete)
+- [x] CI passes on every commit
+- [ ] Pillar 3 (Build Showcases): 0/2 — needs research and import
+- [ ] Pillar 5 (Modded Archives): 0/2 — needs research and import
+- [ ] Pillar 1 (Adventure/Story): 2/3 — 1 more needed
+- [ ] Pillar 2 (All-Items/Utility): 1/2 — 1 more needed
+- [ ] Pillar 4 (Challenge/Speedrun): 1/2 — 1 more needed

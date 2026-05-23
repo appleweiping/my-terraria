@@ -104,33 +104,38 @@ Useful saves that serve a clear purpose, even if they aren't groundbreaking.
 
 ## 3. Expansion Phases
 
-### Phase 1: Foundation (Current)
+### Phase 1: Foundation (Complete)
 
-**Status**: In progress
+**Status**: ✅ Complete as of 2026-05-23
 
 Establish the archive's core infrastructure and initial content.
 
-- [x] Personal save collection organized (72 worlds, 91 players)
-- [x] Initial third-party imports (3 public, 7 private-reference)
+- [x] Personal save collection organized (44 worlds, 54 players)
+- [x] Initial third-party imports (4 public, 7 private-reference)
 - [x] First original project (Astral Forge Vault) with paired characters
-- [x] Local tooling operational (TEdit, .NET SDK, AstralForgeBuilder)
-- [ ] Basic metadata documentation for all existing saves
-- [ ] Directory structure and naming conventions finalized
-- [ ] README and project documentation complete
+- [x] Local tooling operational (TEdit, .NET SDK, TerrariaAgentFramework)
+- [x] Basic metadata documentation for all existing saves (CATALOG.md + meta.json sidecars)
+- [x] Directory structure and naming conventions finalized (docs/naming-conventions.md)
+- [x] README and project documentation complete
 
-**Exit criteria**: Every save in the archive has at minimum a one-line description, version tag, and tier classification.
+**Exit criteria met**: Every save in the archive has at minimum a one-line description, version tag, and tier classification.
 
 ### Phase 2: Breadth
 
+**Status**: In progress as of 2026-05-23
+
 **Goal**: Cover all six content pillars with at least 2-3 quality imports each.
 
-- [ ] Identify and import 2-3 adventure/story maps (Tier A or above)
-- [ ] Expand utility world coverage (version-specific Builder's Workshop snapshots)
-- [ ] Import 2-3 notable build showcases from community sources
-- [ ] Add challenge/speedrun world setups with documentation
-- [ ] Begin modded archive with Calamity and Thorium endgame saves
-- [ ] Document sourcing and licensing for all third-party imports
-- [ ] Establish per-save metadata files (JSON or YAML sidecar format)
+- [x] All 5 original projects complete (Astral Forge Vault, Biome Encyclopedia, Boss Rush Colosseum, Wiring Masterclass, Starter Academy)
+- [x] Per-save .meta.json sidecars for all 4 public imports
+- [x] CI workflow operational (catalog check, LFS validation, provenance check)
+- [x] Naming conventions and metadata spec documented
+- [ ] Identify and import 2-3 adventure/story maps (Tier A or above) — 1 more needed
+- [ ] Expand utility world coverage (Builder's Workshop or version snapshots)
+- [ ] Import 2-3 notable build showcases from community sources — 2 needed
+- [ ] Add challenge/speedrun world setups with documentation — 1 more needed
+- [ ] Begin modded archive with Calamity and Thorium endgame saves — 2 needed
+- [ ] Document sourcing and licensing for all third-party imports (already met for public imports)
 
 **Exit criteria**: No content pillar has fewer than 2 archived saves. All imports have provenance documentation.
 

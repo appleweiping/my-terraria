@@ -1,0 +1,99 @@
+name: Archive Quality Gates
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  catalog-check:
+    name: Catalog Integrity
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout (no LFS blobs)
+        uses: actions/checkout@v4
+        with:
+          lfs: false
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run catalog check
+        run: python tools/build_catalog.py --check
+
+      - name: Run unit tests
+        run: python -m unittest discover -s tests -p "test_*.py" -v
+
+  lfs-manifest:
+    name: LFS Pointer Validation
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout with LFS pointers (no download)
+        uses: actions/checkout@v4
+        with:
+          lfs: false
+
+      - name: Verify LFS pointers are valid
+        run: |
+          # Check that all tracked binary extensions have LFS pointers, not raw blobs
+          # A raw blob would be > 200 bytes for a .wld file; an LFS pointer is ~130 bytes
+          FAIL=0
+          for ext in wld plr map bak; do
+            while IFS= read -r -d '' f; do
+              size=$(wc -c < "$f")
+              if [ "$size" -gt 512 ]; then
+                echo "ERROR: $f appears to be a raw blob ($size bytes), not an LFS pointer"
+                FAIL=1
+              fi
+            done < <(find . -name "*.${ext}" -not -path "./.git/*" -print0)
+          done
+          if [ "$FAIL" -eq 1 ]; then
+            echo "LFS pointer check failed — binary files must be stored via Git LFS"
+            exit 1
+          fi
+          echo "All binary files are LFS pointers."
+
+  provenance-check:
+    name: Import Provenance
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          lfs: false
+
+      - name: Verify every public import has THIRD_PARTY_NOTICE.md
+        run: |
+          FAIL=0
+          for dir in Terraria_saves/imported/*/; do
+            if [ ! -f "${dir}THIRD_PARTY_NOTICE.md" ]; then
+              echo "ERROR: Missing THIRD_PARTY_NOTICE.md in ${dir}"
+              FAIL=1
+            fi
+          done
+          if [ "$FAIL" -eq 1 ]; then
+            exit 1
+          fi
+          echo "All public imports have provenance notices."
+
+      - name: Verify every original project has required docs
+        run: |
+          FAIL=0
+          for dir in originals/*/; do
+            for doc in README.md design.md acceptance-checklist.md; do
+              if [ ! -f "${dir}${doc}" ]; then
+                echo "ERROR: Missing ${doc} in ${dir}"
+                FAIL=1
+              fi
+            done
+          done
+          if [ "$FAIL" -eq 1 ]; then
+            exit 1
+          fi
+          echo "All original projects have required documentation."

@@ -22,8 +22,15 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Run catalog check
-        run: python tools/build_catalog.py --check
+      - name: Run catalog check (with diff on failure)
+        run: |
+          python tools/build_catalog.py --check || {
+            echo "=== Generating fresh catalog for diff ==="
+            python tools/build_catalog.py
+            echo "=== catalog.json diff (first 50 lines) ==="
+            git diff --no-color inventory/catalog.json | head -50
+            exit 1
+          }
 
       - name: Run unit tests
         run: python -m unittest discover -s tests -p "test_*.py" -v

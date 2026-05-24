@@ -3,25 +3,25 @@
   "generated_by": "tools/build_catalog.py",
   "source_metadata_generated": "2026-05-18T21:42:34.4330093Z",
   "summary": {
-    "save_files_total": 220,
+    "save_files_total": 221,
     "primary_worlds": 53,
     "primary_players": 71,
     "public_import_worlds": 4,
-    "original_project_files": 23,
+    "original_project_files": 24,
     "map_cache_files": 48,
-    "backup_files": 48,
+    "backup_files": 49,
     "inventory_rows": 193,
     "metadata_worlds": 49
   },
   "roles": {
-    "original_project": 23,
+    "original_project": 24,
     "personal_player": 73,
     "personal_world": 72,
     "player_map_cache": 48,
     "public_import": 4
   },
   "extensions": {
-    ".bak": 48,
+    ".bak": 49,
     ".map": 48,
     ".plr": 71,
     ".wld": 53
@@ -132,7 +132,7 @@
       "slug": "biome-encyclopedia",
       "title": "Biome Encyclopedia",
       "status": "See README",
-      "files": 3,
+      "files": 4,
       "worlds": 1,
       "players": 2,
       "has_design": true,
@@ -142,7 +142,7 @@
     {
       "slug": "boss-rush-colosseum",
       "title": "Boss Rush Colosseum",
-      "status": "Design document=Complete; Acceptance checklist=Complete; World construction=Not started; Character creation=Not started; Testing/QA=Not started",
+      "status": "Design document=✅ Complete; Acceptance checklist=✅ Complete (90/90); World construction=✅ Complete; Character creation=✅ Complete (5 characters); Testing/QA=✅ Complete",
       "files": 6,
       "worlds": 1,
       "players": 5,
@@ -164,7 +164,7 @@
     {
       "slug": "wiring-masterclass",
       "title": "Wiring Masterclass",
-      "status": "Design document=Complete; Acceptance checklist=Complete; World construction=Not started; Character creation=Not started; Testing/QA=Not started",
+      "status": "Design document=✅ Complete; Acceptance checklist=✅ Complete (80/80); World construction=✅ Complete; Character creation=✅ Complete (2 characters); Testing/QA=✅ Complete",
       "files": 3,
       "worlds": 1,
       "players": 2,
@@ -174,6 +174,12 @@
     }
   ],
   "public_imports": [
+    {
+      "slug": "a-link-to-terraria",
+      "worlds": 0,
+      "has_third_party_notice": true,
+      "notice": "Terraria_saves/imported/a-link-to-terraria/THIRD_PARTY_NOTICE.md"
+    },
     {
       "slug": "all-boss-battle-arenas",
       "worlds": 1,

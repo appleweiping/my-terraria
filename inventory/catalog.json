@@ -3,25 +3,25 @@
   "generated_by": "tools/build_catalog.py",
   "source_metadata_generated": "2026-05-18T21:42:34.4330093Z",
   "summary": {
-    "save_files_total": 221,
+    "save_files_total": 219,
     "primary_worlds": 53,
     "primary_players": 71,
     "public_import_worlds": 4,
-    "original_project_files": 24,
+    "original_project_files": 22,
     "map_cache_files": 48,
-    "backup_files": 49,
+    "backup_files": 47,
     "inventory_rows": 193,
     "metadata_worlds": 49
   },
   "roles": {
-    "original_project": 24,
+    "original_project": 22,
     "personal_player": 73,
     "personal_world": 72,
     "player_map_cache": 48,
     "public_import": 4
   },
   "extensions": {
-    ".bak": 49,
+    ".bak": 47,
     ".map": 48,
     ".plr": 71,
     ".wld": 53
@@ -121,7 +121,7 @@
       "slug": "astral-forge-vault",
       "title": "Astral Forge Vault",
       "status": "See README",
-      "files": 7,
+      "files": 6,
       "worlds": 1,
       "players": 5,
       "has_design": true,
@@ -132,7 +132,7 @@
       "slug": "biome-encyclopedia",
       "title": "Biome Encyclopedia",
       "status": "See README",
-      "files": 4,
+      "files": 3,
       "worlds": 1,
       "players": 2,
       "has_design": true,

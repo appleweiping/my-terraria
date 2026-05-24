@@ -22,6 +22,15 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Debug — count save files visible to CI
+        run: |
+          echo "=== .bak files ==="
+          find . -name "*.bak" -not -path "./.git/*" | sort
+          echo "=== .wld files ==="
+          find . -name "*.wld" -not -path "./.git/*" | sort
+          echo "=== originals/ ==="
+          find originals/ -type f | sort
+
       - name: Run catalog check
         run: python tools/build_catalog.py --check
 

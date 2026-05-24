@@ -2,3 +2,5 @@
 private-imports/
 __pycache__/
 *.pyc
+*.pre-build.bak
+*.pre-ultimate.bak
